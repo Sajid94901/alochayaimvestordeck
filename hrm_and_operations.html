@@ -18,12 +18,11 @@
   th, td { border:1px solid #e6eef8; padding:8px 10px; text-align:left; font-size:13px; vertical-align:middle; }
   thead th { background:#ecfeff; color:#0891b2; text-transform:uppercase; font-weight:700; }
   .mono { font-family: Menlo, Monaco, monospace; text-align: right; }
-  /* Print-friendly styles */
+  /* Print-friendly styles for PDF conversion */
   @media print {
     body { background: #fff; color:#000; padding:0; }
     .card { box-shadow:none; border:none; page-break-inside:avoid; }
     table { font-size:12px; }
-    #hrm-interactive-controls { display:none; }
     .no-print { display: none; }
   }
 </style>
@@ -37,7 +36,7 @@
 
 <div class="card overflow-x-auto">
     <h2 id="granular-staffing">1) Granular Staffing & Payroll Model Per Scenario</h2>
-    <p class="text-sm text-gray-600 mb-4">This table outlines the precise staffing levels and monthly payroll for each operational scenario. The interactive tool below automatically calculates totals and allows for reconciliation against the master P&L figures.</p>
+    <p class="text-sm text-gray-600 mb-4">This table outlines the precise staffing levels and monthly payroll for each operational scenario. This model is reconciled with the master P&L.</p>
     <table>
         <thead>
             <tr>
@@ -135,118 +134,7 @@
     </ul>
 </div>
 
-<div style="font-size:12px; color:#64748b; margin-top:18px;">v1.2 • Prepared by Sajid Hassan • Last updated 2025-10-09 02:36</div>
-
-<script>
-/* --- Auto-sum payroll columns and CSV export for hrm_operations.html (v1.2 by The Architect & Gemini) --- */
-(function(){
-  function parseNum(s){
-    if(!s) return 0;
-    return Number(String(s).replace(/[^0-9.-]+/g,"")) || 0;
-  }
-
-  function computeTotals(){
-    const table = document.querySelector('table');
-    if(!table) return;
-    const rows = Array.from(table.tBodies[0].rows);
-    const headers = Array.from(table.tHead.rows[0].cells).map(h => h.textContent.trim());
-    const colCount = headers.length;
-    const totals = new Array(colCount).fill(0);
-    rows.forEach((tr)=>{
-      if(tr.cells.length < colCount) return;
-      for(let i=1;i<tr.cells.length;i++){
-        const txt = tr.cells[i].textContent || '';
-        const match = txt.match(/([0-9\.,\s]+)(?!.*[0-9\.,\s]+)/);
-        const val = parseNum(match ? match[0] : txt);
-        totals[i] += val;
-      }
-    });
-    let out = document.getElementById('hrm-interactive-controls');
-    if(!out){
-      out = document.createElement('div');
-      out.id = 'hrm-interactive-controls';
-      out.style.marginTop = '12px';
-      out.style.padding = '12px';
-      out.style.background = '#eef6ff';
-      out.style.borderRadius = '8px';
-      out.innerHTML = `
-        <div style="font-weight:bold; margin-bottom:8px;">Computed Monthly Totals:</div>
-        <div id="hrm-totals-values" style="margin-left:8px; font-family: Menlo, Monaco, monospace; margin-bottom:12px;"></div>
-        <div>
-          <button id="hrm-export-csv" style="padding:6px 8px; background:#059669;color:#fff;border-radius:6px;border:0;cursor:pointer">Export CSV</button>
-          <span style="margin-left:12px">Reconcile vs P&L:
-            <select id="hrm-reconcile-select" style="margin-left:6px; padding:4px;">
-            </select>
-            <input id="hrm-reconcile-input" placeholder="P&L Payroll" style="width:100px;padding:4px;margin-left:6px">
-            <span id="hrm-reconcile-out" style="margin-left:10px;font-weight:600"></span>
-          </span>
-        </div>`;
-      table.parentElement.appendChild(out);
-      document.getElementById('hrm-export-csv').addEventListener('click', exportCSV);
-      document.getElementById('hrm-reconcile-input').addEventListener('input', reconcilePnl);
-      document.getElementById('hrm-reconcile-select').addEventListener('change', reconcilePnl);
-    }
-    const select = document.getElementById('hrm-reconcile-select');
-    select.innerHTML = '';
-    const parts = [];
-    for(let i=1;i<totals.length;i++){
-      const head = headers[i] || `Col ${i}`;
-      parts.push(`<strong>${head}:</strong> ${totals[i].toLocaleString()}`);
-      const opt = document.createElement('option');
-      opt.value = i - 1;
-      opt.textContent = head;
-      select.appendChild(opt);
-    }
-    document.getElementById('hrm-totals-values').innerHTML = parts.join(' &nbsp; | &nbsp; ');
-    window.__hrm_data = {
-        headers: headers,
-        totals: totals.slice(1),
-        rows: rows.map(r => Array.from(r.cells).map(c => c.textContent.trim()))
-    };
-    reconcilePnl();
-  }
-
-  function reconcilePnl(){
-      const pnlValue = parseNum(document.getElementById('hrm-reconcile-input').value);
-      const scenarioIndex = Number(document.getElementById('hrm-reconcile-select').value) || 0;
-      const hrmTotal = window.__hrm_data.totals[scenarioIndex] || 0;
-      const variance = hrmTotal - pnlValue;
-      const outEl = document.getElementById('hrm-reconcile-out');
-      if(pnlValue === 0){
-          outEl.textContent = '';
-          return;
-      }
-      const variancePct = Math.abs(variance / pnlValue);
-      if(Math.abs(variance) < 1){
-          outEl.textContent = '✅ Reconciled';
-          outEl.style.color = '#059669';
-      } else {
-          outEl.textContent = `Variance: ${variance.toLocaleString()}`;
-          outEl.style.color = variancePct > 0.1 ? '#be123c' : '#a16207'; // Red if >10% variance
-      }
-  }
-
-  function exportCSV(){
-    const data = window.__hrm_data;
-    if(!data) { alert('Compute totals first'); return; }
-    let csvContent = "data:text/csv;charset=utf-8,";
-    csvContent += data.headers.join(",") + "\r\n";
-    data.rows.forEach(function(rowArray){
-       let row = rowArray.join(",");
-       csvContent += row + "\r\n";
-    });
-    var encodedUri = encodeURI(csvContent);
-    var link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "alo_chaya_staffing_model.csv");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-
-  computeTotals();
-})();
-</script>
+<div style="font-size:12px; color:#64748b; margin-top:18px;">v1.3 • Prepared by Sajid Hassan • Last updated 2025-10-09 03:15</div>
 
 </body>
   </html>
