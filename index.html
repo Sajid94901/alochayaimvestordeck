@@ -11,129 +11,117 @@
 <style>
   body { font-family: 'Inter', system-ui, sans-serif; background-color: #f8fafc; color: #0b1220; }
   .section { padding: 4rem 1rem; }
-  .hero { min-height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(5, 150, 105, 0.9), rgba(14, 165, 164, 0.9)), url('private-lake.webp'); background-size: cover; background-position: center; color: white; text-align: center; }
-  .hero h1 { font-size: 2.8rem; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.4); }
-  .section-title { font-size: 2rem; font-weight: 700; color: #047857; text-align: center; margin-bottom: 2.5rem; }
-  .card { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(9, 30, 66, 0.05); border: 1px solid #e2e8f0; }
-  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; text-align: center; }
-  .kpi-card { background-color: #f0f9ff; border: 1px solid #e0f2fe; padding: 1.5rem; border-radius: 12px; }
-  .kpi-value { font-size: 2.5rem; font-weight: 800; color: #047857; }
-  .kpi-label { font-size: 1rem; color: #0891b2; margin-top: 0.5rem; }
-  .asset-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-  .asset-gallery img { width: 100%; height: 300px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-  .asset-caption { font-size: 0.9rem; text-align: center; color: #475569; margin-top: 0.5rem; font-weight: 600; }
-  .cta-section { background-color: #064e3b; color: white; text-align: center; }
-  .cta-btn { display: inline-flex; align-items: center; gap: 0.75rem; background-color: #10b981; color: white; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-  .cta-btn:hover { background-color: #059669; transform: translateY(-2px); }
-  .cta-btn.secondary { background-color: transparent; border: 2px solid #10b981; }
-  .cta-btn.secondary:hover { background-color: #10b981; }
+  .hero { min-height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(5, 150, 105, 0.9), rgba(14, 165, 164, 0.9)), url('1000094082.jpg'); background-size: cover; background-position: center; color: white; text-align: center; }
+  .hero h1 { font-size: 2.8rem; font-weight: 800; text-shadow: 0 4px 6px rgba(0,0,0,0.4); margin-bottom: 0.5rem; }
+  .hero p { font-size: 1.25rem; font-weight: 400; max-width: 600px; }
+  .key-metric-card { background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 10px 15px rgba(3,15,30,0.1); text-align: center; border-bottom: 4px solid #059669; }
+  .metric-value { font-size: 2rem; font-weight: 800; color: #0b61a4; }
+  .metric-label { font-size: 0.875rem; color: #4b5563; font-weight: 600; text-transform: uppercase; }
+  .heritage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+  .heritage-card { background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .heritage-card h3 { font-size: 1.25rem; font-weight: 700; color: #047857; margin-bottom: 0.5rem; }
+  .asset-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .asset-gallery img { width: 100%; height: 120px; object-fit: cover; border-radius: 0.5rem; }
+  .asset-caption { font-size: 0.75rem; color: #6b7280; text-align: center; margin-top: 0.5rem; }
+  .cta-section { background: linear-gradient(135deg, #0b61a4, #3b82f6); color: white; text-align: center; }
+  .cta-btn { background: #059669; color: white; padding: 0.75rem 2rem; border-radius: 9999px; font-weight: 700; transition: background 0.3s; display: inline-block; }
+  .cta-btn:hover { background: #047857; }
+  .cta-btn.secondary { background: #f59e0b; }
+  .cta-btn.secondary:hover { background: #d97706; }
 </style>
 </head>
 <body>
 
-<main>
-    <section class="hero section">
-        <h1 class="text-4xl md:text-5xl font-bold">An Unprecedented Investment Opportunity</h1>
-        <p class="text-xl md:text-2xl mt-4 max-w-3xl">Activate a 97 Crore BDT Family Legacy Asset with a 2.44 Crore BDT Partnership</p>
-    </section>
+<section class="hero">
+    <h1>Alo Chaya Riverine Resort</h1>
+    <p class="mt-4">The Next-Generation Wellness & Gastronomy Destination in Bangladesh. Activation Investment: **2.44 Crore BDT**</p>
+    <div class="mt-12 flex flex-wrap justify-center gap-6">
+        <a href="#overview" class="cta-btn">Learn More</a>
+        <a href="investment.html" target="_blank" class="cta-btn secondary">View Investment Documents</a>
+    </div>
+</section>
 
-    <section class="section max-w-6xl mx-auto">
-        <h2 class="section-title">The Core Proposition</h2>
-        <div class="kpi-grid">
-            <div class="kpi-card"><div class="kpi-value">2.44 Cr</div><div class="kpi-label">Investment Ask</div></div>
-            <div class="kpi-card"><div class="kpi-value">97 Cr</div><div class="kpi-label">Asset Value Unlocked</div></div>
-            <div class="kpi-card"><div class="kpi-value">~2.5%</div><div class="kpi-label">Investment vs. Asset Value</div></div>
-            <div class="kpi-card"><div class="kpi-value">27.67M</div><div class="kpi-label">Projected Annual NOP (True Mid)</div></div>
+<section class="section bg-gray-100" id="overview">
+    <h2 class="section-title text-2xl font-bold text-center mb-10">Investment Highlights & Key Metrics</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="key-metric-card">
+            <p class="metric-value">213 Crore BDT</p>
+            <p class="metric-label">Total Secured Asset Value (Project + Collateral)</p>
         </div>
-        <div class="card mt-8 text-center"><p class="text-lg text-gray-700">The main building is constructed, eliminating development risk. This is a low-risk, high-return partnership under an ethical **Islamic Musharaka model**.</p></div>
-    </section>
+        <div class="key-metric-card">
+            <p class="metric-value">0.33 Years</p>
+            <p class="metric-label">Estimated Payback Period (True Mid Scenario)</p>
+        </div>
+        <div class="key-metric-card">
+            <p class="metric-value">>200%</p>
+            <p class="metric-label">Project IRR (Internal Rate of Return)</p>
+        </div>
+    </div>
+</section>
 
-    <section class="section max-w-6xl mx-auto bg-gray-50">
-        <h2 class="section-title">A 100-Year Dynastic Legacy</h2>
-        <div class="card">
-            <p class="text-center text-lg text-gray-700">This project is the culmination of a multi-generational family commitment. The investment builds upon a foundation of heritage, honor, and proven business acumen.</p>
+<section class="section">
+    <h2 class="section-title text-2xl font-bold text-center mb-10">Heritage & Asset Foundation</h2>
+    <div class="heritage-grid max-w-6xl mx-auto">
+        <div class="heritage-card">
+            <h3>Paternal Legacy: The 100-Year Consolidation</h3>
+            <p class="text-gray-600">The project is secured by a powerful generational cycle, establishing the family's financial security in the city and on-site.</p>
+            <ul class="text-sm list-disc pl-5 mt-4 space-y-2">
+                <li>**The Departure:** My paternal great-grandfather (**The Daroga**) left the original riverine land in **Enayet Nagar**.</li>
+                <li>**The City Foundation:** He built the **Fatima Mahal** in **Sadiq Bazar**.</li>
+                <li>**The Bungalow (2009):** My father (**The Founder**) built the **5-room bungalow** ($50\text{m} \times 32\text{m}$ footprint) on the riverine land, marking the first large return to the site.</li>
+                <li>**The Collateral Asset (2016-2017):** My father built the residential/commercial **Mahmud Tower** on the **Fatima Mahal** land. This **$116$ Crore BDT** asset serves as primary collateral.</li>
+            </ul>
+        </div>
+
+        <div class="heritage-card">
+            <h3>Maternal Roots & Professional Management</h3>
+            <p class="text-gray-600">The investment is managed by the next generation, rooted in century-old local trust and professional planning.</p>
+            <ul class="text-sm list-disc pl-5 mt-4 space-y-2">
+                <li>**Sarker Bari Legacy (1912):** My maternal great-grandfather purchased the **Sarkar Bari** land near **Matlab, Chadpur**, establishing a century-long local presence.</li>
+                <li>**Local Anchor:** This continuity, reinforced by my maternal grandfather's family, ensures deep community trust for the resort.</li>
+                <li>**My Activation (2023):** As Operation Lead, I initiated professional planning, engaging **SGS Bangladesh** and **NSU Startynext** for system verification.</li>
+                <li>**Commitment:** I am personally reinvesting 50% of my salary to guarantee operational stability.</li>
+            </ul>
+        </div>
+
+        <div class="heritage-card">
+            <h3>Tangible Assets & Security</h3>
+            <p class="text-gray-600">The investment is secured against wholly-owned family assets, eliminating the major risks of construction and land acquisition.</p>
+            <ul class="text-sm list-disc pl-5 mt-4 space-y-2">
+                <li>**Primary Collateral:** The city-center **Mahmud Tower** is valued at **$116$ Crore BDT**.</li>
+                <li>**Project Asset:** The **Alo Chaya Resort Building** itself is **$60,000$ sq ft** across $4$ floors, valued at **$60$ Crore BDT**.</li>
+                <li>**Land Base:** **85 Bighas** (or **20.23 Kani**) of wholly-owned family land, including the riverine resort plot.</li>
+            </ul>
             <div class="asset-gallery">
-                <div>
-                    <img src="founder's-paternal-grandfather.jpg" alt="Founder's Paternal Grandfather">
-                    <p class="asset-caption">
-                        Founder's Paternal Grandfather: “The Pioneer” 
-                        <br><span style="font-weight: 400; font-size: 0.85rem; color: #64748b;">(Acquired Fatima Mahal, now Mahmud Tower site)</span>
-                    </p>
-                </div>
-                <div>
-                    <img src="founder's-father-in-law.jpg" alt="Founder's Father-in-law">
-                    <p class="asset-caption">Founder's Father-in-Law: “The Statesman”</p>
-                </div>
-                <div>
-                    <img src="founder-mahmudul-hassan.jpg" alt="Founder Mahmudul Hassan"> 
-                    <p class="asset-caption">Founder: **Mahmudul Hassan** “The Builder”</p>
-                </div>
-                <div>
-                    <img src="founder's-son-and-the-lighthouse-tales'-and-boardgame-author-founder.jpg" alt="Founder's Son">
-                    <p class="asset-caption">Founder's Son / Author-Founder (Lighthouse Tales & Boardgame)</p>
-                </div>
+                <div><img src="1000094084.jpg" alt="Alo Chaya Building"><p class="asset-caption">Alo Chaya Resort Building (60Cr Project)</p></div>
+                <div><img src="1000093972.jpg" alt="2009 Bungalow"><p class="asset-caption">2009 Family Bungalow (Residential Asset)</p></div>
+                <div><img src="1000093980.jpg" alt="Mahmud Tower Collateral"><p class="asset-caption">Mahmud Tower (116Cr City Collateral)</p></div>
             </div>
         </div>
-    </section>
-    
-    <section class="section max-w-6xl mx-auto">
-        <h2 class="section-title">Proof of Capability: A Portfolio of Assets</h2>
-        <div class="card">
-            <p class="text-center text-lg text-gray-700">We are not just presenting a plan; we are showcasing a track record. Our family's existing portfolio of high-value properties demonstrates our deep experience in managing assets of this scale.</p>
-            <div class="asset-gallery">
-                <div><img src="mahmud-tower.jpg" alt="Mahmud Tower"><p class="asset-caption">Mahmud Tower, Siddik Bazar (116 Cr. Value)</p></div>
-                <div><img src="bungalow.jpg" alt="Family Bungalow"><p class="asset-caption">Family Bungalow, Residential Asset</p></div>
-                <div><img src="mm_house.jpg" alt="MM House"><p class="asset-caption">MM House, Residential Asset</p></div>
-                <div><img src="resort-overview.jpg" alt="Alo Chaya Resort"><p class="asset-caption">Alo Chaya Main Building (The Current Project)</p></div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section max-w-6xl mx-auto bg-gray-50">
-        <h2 class="section-title">Visionary IP: The Lighthouse & Boardgame</h2>
-        <div class="card">
-            <p class="text-center text-lg text-gray-700">Beyond real estate, the Founder's Son has established valuable, unique IP assets demonstrating creative vision and strategic branding potential.</p>
-            <div class="asset-gallery">
-                <div>
-                    <img src="strangers-of-the-lighthouse-rulebook.jpg" alt="Strangers of the Lighthouse Rulebook">
-                    <p class="asset-caption">"Strangers of the Lighthouse" (Boardgame)</p>
-                </div>
-                <div>
-                    <img src="the-lighthouse-tales-promo-v1-&-v2s1.jpg" alt="The Lighthouse Tales Consolidated Promo">
-                    <p class="asset-caption">"The Lighthouse Tales" (Consolidated World Promo)</p>
-                </div>
-                <div>
-                    <img src="the-lighthouse-tales-back-cover.jpg" alt="The Lighthouse Tales Book Back Cover">
-                    <p class="asset-caption">"The Lighthouse Tales" (Synopsis & Bio)</p>
-                </div>
-            </div>
-            <div class="flex flex-wrap gap-4 justify-center mt-8">
-                <a href="https://www.facebook.com/watch/?v=3205338596428844&surface_type=vod&referral_source=vod_deeplink_unit" target="_blank" class="cta-btn secondary">View Boardgame IP Promo (Video)</a>
-                
-                <a href="https://www.amazon.com/s?k=sajid+hassan&rh=n%3A133140011&crid=2E1W9090QBML6&sprefix=sajid+hassan+%2Cdigital-text%2C422&ref=nb_sb_noss" target="_blank" class="cta-btn secondary">View Author's Amazon Store</a>
+<section class="section bg-white">
+    <h2 class="section-title text-2xl font-bold text-center mb-6">Our Distinctive Vision: Luxury Wellness</h2>
+    <div class="max-w-4xl mx-auto text-center">
+        <p class="text-lg text-gray-700 mb-8">Alo Chaya is not just a resort; it is a **Wellness Center** that integrates **Gastronomy (my 15+ years of self-taught expertise)** with a holistic approach to well-being.</p>
+        <p class="text-md text-gray-600 italic">"We are creating a 'Brand Moat' that cannot be copied—a sanctuary grounded in the **8 Dimensions of Wellness** and supported by a culture where every staff member is trained as a 'host,' not just an employee."</p>
+    </div>
+</section>
 
-                <a href="https://www.facebook.com/photo.php?fbid=1258669435963579" target="_blank" class="cta-btn secondary">View Lighthouse Tales Promo (V2-S3)</a>
-            </div>
-        </div>
-    </section>
+<section class="section cta-section">
+    <h2 class="section-title text-white">Due Diligence Documents</h2>
+    <p class="max-w-2xl mx-auto mb-8">Dive deep into our transparent, comprehensive planning documents.</p>
+    <div class="flex flex-wrap gap-6 justify-center">
+        <a href="investment.html" target="_blank" class="cta-btn">Full Financial & Investment Plan</a>
+        <a href="hrm_and_operations.html" target="_blank" class="cta-btn secondary">HRM & Operations Doctrine</a>
+    </div>
+    <div class="mt-6"><a href="Alo Chaya ltd. 3 Funding Scenarios by Sajid Hassan & bro chat GPT .html" target="_blank" class="text-sm text-gray-300 hover:text-white">View Detailed P&L Master File &rarr;</a></div>
+</section>
 
-    <section class="section cta-section">
-        <h2 class="section-title text-white">Due Diligence Documents</h2>
-        <p class="max-w-2xl mx-auto mb-8">Dive deep into our transparent, comprehensive planning documents.</p>
-        <div class="flex flex-wrap gap-6 justify-center">
-            <a href="investment.html" target="_blank" class="cta-btn">Full Financial & Investment Plan</a>
-            <a href="hrm_and_operation.html" target="_blank" class="cta-btn secondary">HRM & Operations Doctrine</a>
-        </div>
-        <div class="mt-6"><a href="Alo Chaya ltd. 3 Funding Scenarios by Sajid Hassan & bro chat GPT .html" target="_blank" class="text-sm text-gray-300 hover:text-white">View Detailed P&L Master File &rarr;</a></div>
-    </section>
+<footer class="bg-gray-800 text-white text-center py-8">
+    <p>&copy; 2024 Alo Chaya Riverine Resort. All Rights Reserved.</p>
+</footer>
 
-    <footer class="bg-gray-800 text-white text-center py-8">
-        <p>&copy; <span id="copyright-year">2025</span> Alo Chaya. All Rights Reserved.</p>
-    </footer>
-
-</main>
-<script>
-    document.getElementById('copyright-year').textContent = new Date().getFullYear();
-</script>
 </body>
 </html>
