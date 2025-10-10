@@ -1,164 +1,450 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Alo Chaya — Omni Financial Matrix & Strategic Plan (FINAL)</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#f1f6f9; color:#0b1220; padding:18px; }
-  .card { background:white; border-radius:12px; padding:18px; box-shadow:0 6px 18px rgba(3,15,30,0.06); margin-bottom:18px; }
-  h1,h2{margin:0 0 12px 0; color: #0b61a4;}
-  h1 { font-size: 24px; }
-  h2 { font-size: 18px; }
-  h3 { font-size: 16px; margin: 16px 0 8px 0; color: #047857; font-weight: 600;}
-  ul { list-style-type: disc; padding-left: 20px; }
-  li { margin-bottom: 8px; }
-  table { border-collapse:collapse; width:100%; }
-  th, td { border:1px solid #e6eef8; padding:8px 10px; text-align:left; font-size:13px; vertical-align:middle; }
-  thead th { background:#ecfeff; color:#0891b2; text-transform:uppercase; font-weight:700; }
-  .status-critical { background:#fee2e2; color:#7f1d1d; font-weight:700; padding:4px 6px; border-radius:6px; display:inline-block; font-size: 11px; }
-  .status-strong { background:#dcfce7; color:#14532d; font-weight:700; padding:4px 6px; border-radius:6px; display:inline-block; font-size: 11px; }
-  .status-caution { background:#fffbeb; color:#713f12; font-weight:700; padding:4px 6px; border-radius:6px; display:inline-block; font-size: 11px; }
-  .mono { font-family: Menlo, Monaco, monospace; text-align: right; }
-  .highlight-pitch { background: #eef6ff; border-left: 4px solid #3b82f6; padding: 12px; border-radius: 6px; font-style: italic; color: #1e3a8a; }
-  .note { background:#fff9e6; border-left:4px solid #f59e0b; padding:12px; border-radius:6px; margin-top:10px; font-size: 14px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alo Chaya - Financial Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; padding: 2rem; }
+        .card { background-color: white; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); margin-bottom: 2.5rem; overflow: hidden; }
+        .card-header { padding: 1.5rem; background-color: #f8fafc; border-bottom: 1px solid #e2e8f0; }
+        .card-title { font-size: 1.5rem; font-weight: 700; color: #1e3a8a; }
+        .card-body { padding: 1.5rem; }
+        .overflow-x-auto { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; white-space: nowrap; }
+        th { background-color: #f8fafc; font-weight: 600; color: #334155; }
+        .mono { font-family: 'Menlo', 'Monaco', 'Courier New', monospace; }
+        .positive { color: #166534; }
+        .negative { color: #be123c; }
+    </style>
 </head>
 <body>
-
-<div class="card">
-    <h1>Alo Chaya — Omni Financial Matrix & Strategic Plan</h1>
-    <p class="text-sm text-gray-600">This definitive document integrates the final financial models, granular staffing, final CapEx, founder's reinvestment clause, and the complete HRM and Operations plan, told from the perspective of the Operation Lead.</p>
-</div>
-
-<div class="card">
-    <h2>Strategic Summary & Pitch</h2>
-    <p class="highlight-pitch">
-        <strong>One-Line Pitch:</strong> "With the **$60$ Crore Alo Chaya Building** already constructed ($60,000$ sq ft / $4$ floors) and secured by our separate **$116$ Crore Mahmud Tower** collateral, we are seeking only **2.44 Crore BDT** to activate the asset. Our model is so robust that even in a lean scenario, it remains cash-flow positive, as I am personally reinvesting $50\%$ of my salary to guarantee stability."
-    </p>
-</div>
-
-<div class="card overflow-x-auto">
-    <h2>1) Omni Investment Appraisal Matrix (Aligned with Master P&L)</h2>
-    <p class="text-sm text-gray-600 mb-4">Comprehensive analysis sourced directly from the detailed IFRS model, reflecting the project's robust profitability.</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Scenario</th>
-                <th>Annual NOP</th>
-                <th>Project IRR</th>
-                <th>Payback</th>
-                <th>DSCR (vs 39.5M Loan)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-yellow-50"><td>Worst Case</td><td class="mono">1.14M</td><td class="mono">~5%</td><td class="mono">~3.1 yrs</td><td><span class="status-caution">0.16x</span></td></tr>
-            <tr class="bg-green-50"><td>Improbable Mid</td><td class="mono">10.66M</td><td class="mono">~150%</td><td class="mono">~0.65 yrs</td><td><span class="status-strong">1.50x</span></td></tr>
-            <tr class="bg-green-100"><td>True Mid</td><td class="mono">27.67M</td><td class="mono">>200%</td><td class="mono">~0.33 yrs</td><td><span class="status-strong">3.91x</span></td></tr>
-            <tr class="bg-blue-100"><td>Low Ideal</td><td class="mono">57.69M</td><td class="mono">>200%</td><td class="mono">~0.23 yrs</td><td><span class="status-strong">8.15x</span></td></tr>
-        </tbody>
-    </table>
-</div>
-
-<div class="card overflow-x-auto">
-    <h2>2) Granular Payroll Model Per Scenario</h2>
-    <p class="text-sm text-gray-600 mb-4">This table outlines the precise monthly payroll expenses for key operational scenarios, sourced from the master financial model.</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Scenario</th>
-                <th>Worst</th>
-                <th>Improbable</th>
-                <th>True Mid</th>
-                <th>Low Ideal</th>
-                <th>High Ideal</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="font-bold">
-                <td>Total Monthly Payroll</td>
-                <td class="mono">606,000</td>
-                <td class="mono">606,000</td>
-                <td class="mono">966,000</td>
-                <td class="mono">1,236,000</td>
-                <td class="mono">1,611,000</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<div class="card">
-    <h2>3) The Asset Foundation: Balance Sheet Summary</h2>
-    <p class="text-sm text-gray-600 mb-4">The investment is secured against a significant, pre-existing, and wholly-owned asset base, eliminating the risks associated with construction and land acquisition.</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Asset</th>
-                <th class="text-right">Value (BDT)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Alo Chaya Resort Building (60,000 sq ft, 4 Floors)</td>
-                <td class="mono">600,000,000</td>
-            </tr>
-            <tr>
-                <td>Mahmud Tower (Separate City Collateral, Built 2016-2017)</td>
-                <td class="mono">1,160,000,000</td>
-            </tr>
-            <tr>
-                <td>Land (85 Bighas / 20.23 Kani)</td>
-                <td class="mono">370,000,000</td>
-            </tr>
-            <tr class="font-bold bg-blue-100">
-                <td>Total Secured Asset Value</td>
-                <td class="mono">2,130,000,000</td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="note">
-        <strong>Note on 100-Year Generational Legacy:</strong> My paternal great-grandfather (**The Daroga**) left the original **Enayet Nagar** land to build the **Fatima Mahal** (Sadiq Bazar). My father (The Founder) built the **5-room bungalow** on the riverine land in **2009**, followed by the **$116$ Crore Mahmud Tower** (2016-2017) on the Fatima Mahal land, which serves as strong separate collateral. The **Alo Chaya Building** is the **$60$ Crore asset** built on our riverine land, with activation led by me, **Sajid Hassan** (2023).
+<div class="card" id="investment-appraisal-scenarios">
+    <div class="card-header">
+        <h2 class="card-title">Table 1: Investment Appraisal Across All Scenarios</h2>
+        <p class="text-sm text-gray-600">Metrics are recalculated based on the Net Operating Profit from each scenario against the 2.44 Cr CAPEX. This table is scrollable.</p>
+    </div>
+    <div class="card-body overflow-x-auto">
+        <table class="w-full text-sm">
+            <thead>
+                <tr class="text-left">
+                    <th class="sticky left-0 bg-gray-100">Metric</th>
+                    <th>Worst Case</th>
+                    <th>Improbable Mid</th>
+                    <th>True Mid</th>
+                    <th>Low Ideal</th>
+                    <th>Mid Ideal</th>
+                    <th>High Ideal</th>
+                    <th>Allah Blessed T1</th>
+                    <th>Allah Blessed T2</th>
+                    <th>Allah Blessed T3</th>
+                    <th>Allah Blessed T4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="sticky left-0 bg-white font-semibold">Payback Period (Months)</td>
+                    <td class="mono negative">N/A (Loss)</td>
+                    <td class="mono negative">N/A (Loss)</td>
+                    <td class="mono positive">20.4</td>
+                    <td class="mono positive">10.1</td>
+                    <td class="mono positive">8.6</td>
+                    <td class="mono positive">7.4</td>
+                    <td class="mono positive">6.4</td>
+                    <td class="mono positive">5.6</td>
+                    <td class="mono positive">5.0</td>
+                    <td class="mono positive">4.5</td>
+                </tr>
+                <tr>
+                    <td class="sticky left-0 bg-white font-semibold">Annual ROI</td>
+                    <td class="mono negative">-50.7%</td>
+                    <td class="mono negative">-9.2%</td>
+                    <td class="mono positive">58.9%</td>
+                    <td class="mono positive">119.0%</td>
+                    <td class="mono positive">139.1%</td>
+                    <td class="mono positive">162.6%</td>
+                    <td class="mono positive">186.1%</td>
+                    <td class="mono positive">214.5%</td>
+                    <td class="mono positive">238.0%</td>
+                    <td class="mono positive">266.5%</td>
+                </tr>
+                <tr>
+                    <td class="sticky left-0 bg-white font-semibold">DSCR (vs 3.95M Debt)</td>
+                    <td class="mono negative">-3.13x</td>
+                    <td class="mono negative">-0.57x</td>
+                    <td class="mono positive">5.02x</td>
+                    <td class="mono positive">10.14x</td>
+                    <td class="mono positive">11.85x</td>
+                    <td class="mono positive">13.85x</td>
+                    <td class="mono positive">15.65x</td>
+                    <td class="mono positive">17.85x</td>
+                    <td class="mono positive">19.64x</td>
+                    <td class="mono positive">22.04x</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
-
-<div class="card">
-    <h2>4) Human Resources Management (HRM) & Culture Plan</h2>
-    <p class="text-sm text-gray-600 mb-4">Our HRM strategy is designed to build a loyal, highly-skilled team that embodies the spirit of Alo Chaya, turning service into an art form. Our core principle is: "We are hosts, not staff."</p>
-    
-    <h3>A. Recruitment & Onboarding</h3>
-    <ul>
-        <li><strong>Local First Initiative:</strong> We will prioritize hiring from the local Chandpur community, creating sustainable employment and fostering strong local ties.</li>
-        <li><strong>The Alo Chaya Immersion:</strong> Every new hire will undergo a 7-day onboarding program personally led by my father, the Founder. This is not just training; it is an induction into our culture and the core principles of guest obsession.</li>
-    </ul>
-
-    <h3>B. Training, Development & Dignity</h3>
-    <ul>
-        <li><strong>Culinary Training Led by Operation Lead:</strong> My $15+$ years of self-taught culinary expertise is our greatest competitive advantage and will form the core of our training.</li>
-        <li><strong>Defined Career Paths:</strong> We have established clear, dignified promotion paths for all roles (e.g., Commis Chef to Sous-Artisan, Garçon to Service Captain), proving we are a career destination, not just a job. This is key to retaining top talent.</li>
-    </ul>
+<div class="card" id="ifrs-annual-recalculated">
+    <div class="card-header">
+        <h2 class="card-title">Table 2: IFRS/IAS Detailed Annual Forecast (Recalculated)</h2>
+        <p class="text-sm text-gray-600">Based on your specific formulas, with a 27.5% tax rate on positive earnings (EBITDA). This table is scrollable.</p>
+    </div>
+    <div class="card-body overflow-x-auto">
+        <table class="w-full text-sm">
+            <thead>
+                <tr class="text-left">
+                    <th class="sticky left-0 bg-gray-100 z-10">Description / Line Item</th>
+                    <th>Worst Case</th>
+                    <th>Improbable Mid</th>
+                    <th>True Mid</th>
+                    <th>Low Ideal</th>
+                    <th>Mid Ideal</th>
+                    <th>High Ideal</th>
+                    <th>Allah Blessed T1</th>
+                    <th>Allah Blessed T2</th>
+                    <th>Allah Blessed T3</th>
+                    <th>Allah Blessed T4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-gray-50">
+                    <td class="p-2 font-semibold sticky left-0 bg-gray-50 z-10">Forecasted Revenue</td>
+                    <td class="p-2 mono">11,812,500</td>
+                    <td class="p-2 mono">23,625,000</td>
+                    <td class="p-2 mono">45,450,000</td>
+                    <td class="p-2 mono">68,268,750</td>
+                    <td class="p-2 mono">75,825,000</td>
+                    <td class="p-2 mono">83,375,000</td>
+                    <td class="p-2 mono">90,925,000</td>
+                    <td class="p-2 mono">99,503,125</td>
+                    <td class="p-2 mono">107,053,125</td>
+                    <td class="p-2 mono">115,631,250</td>
+                </tr>
+                <tr>
+                    <td class="p-2 pl-4 sticky left-0 bg-white z-10 text-red-600">(Less) Discounts</td>
+                    <td class="p-2 mono text-red-600">(2,700,000)</td>
+                    <td class="p-2 mono text-red-600">(5,400,000)</td>
+                    <td class="p-2 mono text-red-600">(10,800,000)</td>
+                    <td class="p-2 mono text-red-600">(16,200,000)</td>
+                    <td class="p-2 mono text-red-600">(18,000,000)</td>
+                    <td class="p-2 mono text-red-600">(20,000,000)</td>
+                    <td class="p-2 mono text-red-600">(22,000,000)</td>
+                    <td class="p-2 mono text-red-600">(24,500,000)</td>
+                    <td class="p-2 mono text-red-600">(26,500,000)</td>
+                    <td class="p-2 mono text-red-600">(29,500,000)</td>
+                </tr>
+                <tr class="font-semibold">
+                    <td class="p-2 sticky left-0 bg-white z-10">Actual / Discounted Revenue</td>
+                    <td class="p-2 mono">9,112,500</td>
+                    <td class="p-2 mono">18,225,000</td>
+                    <td class="p-2 mono">34,650,000</td>
+                    <td class="p-2 mono">52,068,750</td>
+                    <td class="p-2 mono">57,825,000</td>
+                    <td class="p-2 mono">63,375,000</td>
+                    <td class="p-2 mono">68,925,000</td>
+                    <td class="p-2 mono">75,003,125</td>
+                    <td class="p-2 mono">80,553,125</td>
+                    <td class="p-2 mono">86,131,250</td>
+                </tr>
+                <tr class="bg-gray-50">
+                    <td class="p-2 font-semibold sticky left-0 bg-gray-50 z-10">Expenses</td>
+                    <td colspan="10"></td>
+                </tr>
+                <tr>
+                    <td class="p-2 pl-4 sticky left-0 bg-white z-10">Granular Expenses (Dignified Payroll)</td>
+                    <td colspan="10" class="p-2 mono text-center text-red-600">(18,048,000)</td>
+                </tr>
+                <tr>
+                    <td class="p-2 pl-4 sticky left-0 bg-white z-10">Other Operating Expenses</td>
+                    <td colspan="10" class="p-2 mono text-center text-red-600">(6,240,000)</td>
+                </tr>
+                <tr class="font-semibold">
+                    <td class="p-2 sticky left-0 bg-white z-10">Total Expenses</td>
+                    <td colspan="10" class="p-2 mono text-center text-red-600">(24,288,000)</td>
+                </tr>
+                <tr class="font-bold text-lg bg-blue-100 text-blue-800">
+                    <td class="p-2 sticky left-0 bg-blue-100 z-10">EBITDA</td>
+                    <td class="p-2 mono negative">(15,175,500)</td>
+                    <td class="p-2 mono negative">(6,063,000)</td>
+                    <td class="p-2 mono positive">10,362,000</td>
+                    <td class="p-2 mono positive">27,780,750</td>
+                    <td class="p-2 mono positive">33,537,000</td>
+                    <td class="p-2 mono positive">39,087,000</td>
+                    <td class="p-2 mono positive">44,637,000</td>
+                    <td class="p-2 mono positive">50,715,125</td>
+                    <td class="p-2 mono positive">56,265,125</td>
+                    <td class="p-2 mono positive">61,843,250</td>
+                </tr>
+                <tr>
+                    <td class="p-2 sticky left-0 bg-white z-10 text-red-600">Tax (27.5% of EBITDA)</td>
+                    <td class="p-2 mono text-red-600">(0)</td>
+                    <td class="p-2 mono text-red-600">(0)</td>
+                    <td class="p-2 mono text-red-600">(2,849,550)</td>
+                    <td class="p-2 mono text-red-600">(7,639,706)</td>
+                    <td class="p-2 mono text-red-600">(9,222,675)</td>
+                    <td class="p-2 mono text-red-600">(10,748,925)</td>
+                    <td class="p-2 mono text-red-600">(12,275,175)</td>
+                    <td class="p-2 mono text-red-600">(13,946,659)</td>
+                    <td class="p-2 mono text-red-600">(15,472,909)</td>
+                    <td class="p-2 mono text-red-600">(17,006,894)</td>
+                </tr>
+                <tr class="font-bold text-lg bg-green-100 text-green-800">
+                    <td class="p-2 sticky left-0 bg-green-100 z-10">Net Profit</td>
+                    <td class="p-2 mono negative">(15,175,500)</td>
+                    <td class="p-2 mono negative">(6,063,000)</td>
+                    <td class="p-2 mono positive">7,512,450</td>
+                    <td class="p-2 mono positive">20,141,044</td>
+                    <td class="p-2 mono positive">24,314,325</td>
+                    <td class="p-2 mono positive">28,338,075</td>
+                    <td class="p-2 mono positive">32,361,825</td>
+                    <td class="p-2 mono positive">36,768,466</td>
+                    <td class="p-2 mono positive">40,792,216</td>
+                    <td class="p-2 mono positive">44,836,356</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
-
-<div class="card">
-    <h2>5) Operations Plan: The Guest Journey</h2>
-    <p class="text-sm text-gray-600 mb-4">My operational plan ensures a flawless, memorable, and repeatable luxury experience for every guest, founded on the principles of holistic well-being.</p>
-
-    <h3>A. The Wellness Center: Our "Brand Moat"</h3>
-    <p class="text-sm text-gray-600">The Wellness Center is the physical manifestation of our core philosophy. It is a sanctuary where guests can embark on their own journey of well-being, focusing on the 8 Dimensions of Wellness grounded in Islamic principles. This is not an amenity; it is our unique "Brand Moat" that cannot be copied.</p>
-    
-    <h3>B. Service Standards & Quality Control</h3>
-    <ul>
-        <li><strong>The "HEART" Service Recovery Model:</strong> All staff will be trained in our simple but powerful model for turning any issue into a positive experience: <strong>H</strong>ear, <strong>E</strong>mpathize, <strong>A</strong>pologize, <strong>R</strong>esolve, <strong>T</strong>hank.</li>
-        <li><strong>The Daily Morning Briefing:</strong> Each day, the management team will review all guest feedback from the previous 24 hours to identify and act on areas for immediate improvement, creating a culture of constant refinement.</li>
-    </ul>
-</div>
-
-<div class="card">
-    <h2>6) Conclusion & The Investment Opportunity</h2>
-    <p class="text-sm text-gray-600 mb-2">Alo Chaya is more than a resort; it is an asset-backed, low-risk, high-return investment into the future of Bangladeshi hospitality. The **$60$ Crore Alo Chaya Building** ($60,000$ sq ft / $4$ floors) is already constructed, and the investment is secured by the **$116$ Crore Mahmud Tower** collateral.</p>
-    <p class="text-sm text-gray-600 mb-2">We are seeking a modest **2.44 Crore BDT** not to build a dream, but to activate an existing, family-built, high-value asset base. The required investment is only **~1.1%** of the **Total Secured Asset Value ($213$ Crore BDT)**, making this a uniquely secure and compelling proposition.</p>
-    <p class="text-sm text-gray-600 mb-2">This investment will be structured under an **Islamic Musharaka model**, ensuring a partnership that is both ethical and profitable. We are not just seeking capital; we are seeking strategic partners to share in our vision and success.</p>
-</div>
-
-</body>
+  <div class="card" id="ifrs-monthly-recalculated">
+    <div class="card-header">
+        <h2 class="card-title">Table 3: IFRS/IAS Detailed Monthly Breakdown</h2>
+        <p class="text-sm text-gray-600">All figures from Table 2 divided by 12. This table is scrollable.</p>
+    </div>
+    <div class="card-body overflow-x-auto">
+        <table class="w-full text-sm">
+            <thead>
+                <tr class="text-left">
+                    <th class="sticky left-0 bg-gray-100 z-10">Description / Line Item</th>
+                    <th>Worst Case</th>
+                    <th>Improbable Mid</th>
+                    <th>True Mid</th>
+                    <th>Low Ideal</th>
+                    <th>Mid Ideal</th>
+                    <th>High Ideal</th>
+                    <th>Allah Blessed T1</th>
+                    <th>Allah Blessed T2</th>
+                    <th>Allah Blessed T3</th>
+                    <th>Allah Blessed T4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-gray-50">
+                    <td class="p-2 font-semibold sticky left-0 bg-gray-50 z-10">Forecasted Revenue</td>
+                    <td class="p-2 mono">984,375</td>
+                    <td class="p-2 mono">1,968,750</td>
+                    <td class="p-2 mono">3,787,500</td>
+                    <td class="p-2 mono">5,689,063</td>
+                    <td class="p-2 mono">6,318,750</td>
+                    <td class="p-2 mono">6,947,917</td>
+                    <td class="p-2 mono">7,577,083</td>
+                    <td class="p-2 mono">8,291,927</td>
+                    <td class="p-2 mono">8,921,094</td>
+                    <td class="p-2 mono">9,635,938</td>
+                </tr>
+                <tr>
+                    <td class="p-2 pl-4 sticky left-0 bg-white z-10 text-red-600">(Less) Discounts</td>
+                    <td class="p-2 mono text-red-600">(225,000)</td>
+                    <td class="p-2 mono text-red-600">(450,000)</td>
+                    <td class="p-2 mono text-red-600">(900,000)</td>
+                    <td class="p-2 mono text-red-600">(1,350,000)</td>
+                    <td class="p-2 mono text-red-600">(1,500,000)</td>
+                    <td class="p-2 mono text-red-600">(1,666,667)</td>
+                    <td class="p-2 mono text-red-600">(1,833,333)</td>
+                    <td class="p-2 mono text-red-600">(2,041,667)</td>
+                    <td class="p-2 mono text-red-600">(2,208,333)</td>
+                    <td class="p-2 mono text-red-600">(2,458,333)</td>
+                </tr>
+                <tr class="font-semibold">
+                    <td class="p-2 sticky left-0 bg-white z-10">Actual / Discounted Revenue</td>
+                    <td class="p-2 mono">759,375</td>
+                    <td class="p-2 mono">1,518,750</td>
+                    <td class="p-2 mono">2,887,500</td>
+                    <td class="p-2 mono">4,339,063</td>
+                    <td class="p-2 mono">4,818,750</td>
+                    <td class="p-2 mono">5,281,250</td>
+                    <td class="p-2 mono">5,743,750</td>
+                    <td class="p-2 mono">6,250,260</td>
+                    <td class="p-2 mono">6,712,760</td>
+                    <td class="p-2 mono">7,177,604</td>
+                </tr>
+                <tr class="bg-gray-50">
+                    <td class="p-2 font-semibold sticky left-0 bg-gray-50 z-10">Expenses</td>
+                    <td colspan="10"></td>
+                </tr>
+                <tr>
+                    <td class="p-2 pl-4 sticky left-0 bg-white z-10">Granular Expenses (Dignified Payroll)</td>
+                    <td colspan="10" class="p-2 mono text-center text-red-600">(1,504,000)</td>
+                </tr>
+                <tr>
+                    <td class="p-2 pl-4 sticky left-0 bg-white z-10">Other Operating Expenses</td>
+                    <td colspan="10" class="p-2 mono text-center text-red-600">(520,000)</td>
+                </tr>
+                <tr class="font-semibold">
+                    <td class="p-2 sticky left-0 bg-white z-10">Total Expenses</td>
+                    <td colspan="10" class="p-2 mono text-center text-red-600">(2,024,000)</td>
+                </tr>
+                <tr class="font-bold text-lg bg-blue-100 text-blue-800">
+                    <td class="p-2 sticky left-0 bg-blue-100 z-10">EBITDA</td>
+                    <td class="p-2 mono negative">(1,264,625)</td>
+                    <td class="p-2 mono negative">(505,250)</td>
+                    <td class="p-2 mono positive">863,500</td>
+                    <td class="p-2 mono positive">2,315,063</td>
+                    <td class="p-2 mono positive">2,794,750</td>
+                    <td class="p-2 mono positive">3,257,250</td>
+                    <td class="p-2 mono positive">3,719,750</td>
+                    <td class="p-2 mono positive">4,226,260</td>
+                    <td class="p-2 mono positive">4,688,760</td>
+                    <td class="p-2 mono positive">5,153,604</td>
+                </tr>
+                <tr>
+                    <td class="p-2 sticky left-0 bg-white z-10 text-red-600">Tax (27.5% of EBITDA)</td>
+                    <td class="p-2 mono text-red-600">(0)</td>
+                    <td class="p-2 mono text-red-600">(0)</td>
+                    <td class="p-2 mono text-red-600">(237,463)</td>
+                    <td class="p-2 mono text-red-600">(636,642)</td>
+                    <td class="p-2 mono text-red-600">(768,556)</td>
+                    <td class="p-2 mono text-red-600">(895,744)</td>
+                    <td class="p-2 mono text-red-600">(1,022,931)</td>
+                    <td class="p-2 mono text-red-600">(1,162,222)</td>
+                    <td class="p-2 mono text-red-600">(1,289,409)</td>
+                    <td class="p-2 mono text-red-600">(1,417,241)</td>
+                </tr>
+                <tr class="font-bold text-lg bg-green-100 text-green-800">
+                    <td class="p-2 sticky left-0 bg-green-100 z-10">Net Profit</td>
+                    <td class="p-2 mono negative">(1,264,625)</td>
+                    <td class="p-2 mono negative">(505,250)</td>
+                    <td class="p-2 mono positive">626,038</td>
+                    <td class="p-2 mono positive">1,678,420</td>
+                    <td class="p-2 mono positive">2,026,194</td>
+                    <td class="p-2 mono positive">2,361,506</td>
+                    <td class="p-2 mono positive">2,696,819</td>
+                    <td class="p-2 mono positive">3,064,039</td>
+                    <td class="p-2 mono positive">3,399,351</td>
+                    <td class="p-2 mono positive">3,736,363</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  <div class="card" id="hr-doctrine">
+    <div class="card-header">
+        <h2 class="card-title">Table 4: HR Policies, Principles & Doctrine</h2>
+        <p class="text-sm text-gray-600 mt-1">Our static, investor-facing HR doctrine, tying people strategy to brand, KPIs, and leadership development.</p>
+    </div>
+    <div class="card-body">
+        <table class="w-full text-sm">
+            <thead>
+                <tr>
+                    <th class="w-1/4">Policy Area</th>
+                    <th>Doctrine & Applied Approach</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-semibold align-top">Core Philosophy</td>
+                    <td><strong>“Dignified Livelihoods & Holistic Well-Being.”</strong> — We pay dignity wages, ensure predictable payroll, provide staff wellness access, and build clear career paths. Every HR policy maps directly to our brand identity and the guest experience.</td>
+                </tr>
+                <tr>
+                    <td class="font-semibold align-top">Hiring & Assessment</td>
+                    <td>Multi-stage selection: CV → phone screen → role simulation / stress interview → short written scenario → verbal presentation → references. We use Maslow-informed screening for motivation and stability, with objective scoring and a 3-month probation period.</td>
+                </tr>
+                <tr>
+                    <td class="font-semibold align-top">Leadership Model Suite</td>
+                    <td class="align-top">
+                        We embed multiple complementary leadership frameworks to shape development and succession:
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li><strong>Jim Collins (Level 5):</strong> We promote leaders who combine deep humility with intense professional will.</li>
+                            <li><strong>John C. Maxwell (5 Levels):</strong> We craft development ladders tied to compensation and equity vesting based on a manager's progression.</li>
+                            <li><strong>Kelley (Followership):</strong> We cultivate "effective" followers who think critically and act in alignment with our strategy.</li>
+                            <li><strong>Situational Leadership:</strong> Managers are trained to flex between directing, coaching, supporting, and delegating based on employee needs.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-semibold align-top">Personality & Psychometrics</td>
+                     <td class="align-top">
+                        We use science-backed personality screening for optimal role-fit:
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li><strong>NEO / Big Five (OCEAN):</strong> A baseline measure of Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.</li>
+                            <li><strong>DeYoung & Peterson Facets:</strong> For senior roles, we use deeper facet mapping (e.g., self-discipline, warmth, achievement-striving).</li>
+                        </ul>
+                        <p class="mt-2 text-xs text-gray-600"><em>Usage: Applied as a baseline, not a sole criterion, and combined with role-performance simulations.</em></p>
+                    </td>
+                </tr>
+                 <tr>
+                    <td class="font-semibold align-top">Assessment & Promotion</td>
+                    <td>A short assessment center for managerial posts includes leaderless group tasks, guest recovery role-plays, and operational case studies to map candidates against our leadership models. Promotion is gated by demonstrated followership and leadership qualities.</td>
+                </tr>
+                <tr>
+                    <td class="font-semibold align-top">Governance & Brand Alignment</td>
+                    <td>All policies are codified in our Employee Handbook & HRIS. Every HR metric—from recruitment language to service scripts—maps directly to our Brand Identity (Kapferer) and Brand Performance (Keller) models. Our staff are our live brand ambassadors.</td>
+                </tr>
+                 <tr>
+                    <td class="font-semibold align-top">Project Lead Contingency</td>
+                    <td>In Worst & Improbable scenarios, the Project Lead contributes 50% of monthly salary to a contingency equity pool until a pre-agreed breakeven KPI is met, ensuring full skin-in-the-game for investors.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  <div class="card" id="ifrs-expansion">
+    <div class="card-header">
+        <h2 class="card-title">Table 5: Future Expansion IFRS/IAS Projections (Annual)</h2>
+        <p class="text-sm text-gray-600 mt-1">Projections based on the "Mid Ideal" occupancy rate (180 nights), showing scalability. This table is scrollable.</p>
+    </div>
+    <div class="card-body overflow-x-auto">
+        <table class="w-full text-sm">
+            <thead>
+                <tr class="text-left">
+                    <th class="sticky left-0 bg-gray-100 z-10">Description / Line Item</th>
+                    <th>Baseline (23 Rooms)</th>
+                    <th>Phase 1 (27 Rooms)</th>
+                    <th>Phase 2 (31 Rooms)</th>
+                    <th>Phase 3 (34 Rooms)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-gray-50">
+                    <td class="p-2 font-semibold sticky left-0 bg-gray-50 z-10">Actual / Discounted Revenue</td>
+                    <td class="p-2 mono">57,825,000</td>
+                    <td class="p-2 mono">67,905,000</td>
+                    <td class="p-2 mono">77,985,000</td>
+                    <td class="p-2 mono">85,545,000</td>
+                </tr>
+                <tr class="font-semibold">
+                    <td class="p-2 sticky left-0 bg-white z-10">Total Expenses</td>
+                    <td class="p-2 mono text-red-600">(24,288,000)</td>
+                    <td class="p-2 mono text-red-600">(27,408,000)</td>
+                    <td class="p-2 mono text-red-600">(30,108,000)</td>
+                    <td class="p-2 mono text-red-600">(32,388,000)</td>
+                </tr>
+                <tr class="font-bold text-lg bg-blue-100 text-blue-800">
+                    <td class="p-2 sticky left-0 bg-blue-100 z-10">EBITDA</td>
+                    <td class="p-2 mono positive">33,537,000</td>
+                    <td class="p-2 mono positive">40,497,000</td>
+                    <td class="p-2 mono positive">47,877,000</td>
+                    <td class="p-2 mono positive">53,157,000</td>
+                </tr>
+                <tr>
+                    <td class="p-2 sticky left-0 bg-white z-10 text-red-600">Tax (27.5% of EBITDA)</td>
+                    <td class="p-2 mono text-red-600">(9,222,675)</td>
+                    <td class="p-2 mono text-red-600">(11,136,675)</td>
+                    <td class="p-2 mono text-red-600">(13,166,175)</td>
+                    <td class="p-2 mono text-red-600">(14,618,175)</td>
+                </tr>
+                <tr class="font-bold text-lg bg-green-100 text-green-800">
+                    <td class="p-2 sticky left-0 bg-green-100 z-10">Net Profit</td>
+                    <td class="p-2 mono positive">24,314,325</td>
+                    <td class="p-2 mono positive">29,360,325</td>
+                    <td class="p-2 mono positive">34,710,825</td>
+                    <td class="p-2 mono positive">38,538,825</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+    </body>
 </html>
