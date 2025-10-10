@@ -20,7 +20,7 @@
   h2 { font-size: 2.25rem; font-weight: 700; margin-bottom: 2rem; color: var(--primary-color); text-align: center; }
   h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: var(--secondary-color); border-bottom: 2px solid #e0e7ff; padding-bottom: 0.5rem; }
   p { line-height: 1.7; margin-bottom: 1rem; color: #334155; }
-  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
   .stat-card { background-color: #f0fdf4; border-left: 4px solid var(--primary-color); padding: 1.5rem; border-radius: 4px; }
   .stat-title { font-size: 0.9rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.05em; }
   .stat-value { font-size: 2rem; font-weight: 700; color: var(--primary-color); }
@@ -46,69 +46,46 @@
         <div class="container mx-auto max-w-6xl">
             <h2>Financial Performance Highlights</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="stat-card">
-                    <p class="stat-title">Projected Annual NOP</p>
-                    <p class="stat-value">48.68M BDT</p>
-                    <p class="text-sm text-gray-600">(Low Ideal Scenario)</p>
-                </div>
-                <div class="stat-card">
-                    <p class="stat-title">DSCR</p>
-                    <p class="stat-value">6.88x</p>
-                    <p class="text-sm text-gray-600">(vs 3.95 Cr Benchmark Loan)</p>
-                </div>
-                <div class="stat-card">
-                    <p class="stat-title">Payback Period</p>
-                    <p class="stat-value">9.7 Months</p>
-                    <p class="text-sm text-gray-600">(Low Ideal Scenario)</p>
-                </div>
-                 <div class="stat-card">
-                    <p class="stat-title">IRR</p>
-                    <p class="stat-value">17%</p>
-                    <p class="text-sm text-gray-600">(True Mid Scenario)</p>
-                </div>
+                <div class="stat-card"> <p class="stat-title">Projected Annual NOP</p> <p class="stat-value">48.68M BDT</p> <p class="text-sm text-gray-600">(Low Ideal Scenario)</p> </div>
+                <div class="stat-card"> <p class="stat-title">DSCR</p> <p class="stat-value">6.88x</p> <p class="text-sm text-gray-600">(vs 3.95 Cr Benchmark Loan)</p> </div>
+                <div class="stat-card"> <p class="stat-title">Payback Period</p> <p class="stat-value">9.7 Months</p> <p class="text-sm text-gray-600">(Low Ideal Scenario)</p> </div>
+                <div class="stat-card"> <p class="stat-title">IRR</p> <p class="stat-value">17%</p> <p class="text-sm text-gray-600">(True Mid Scenario)</p> </div>
             </div>
-            <p class="text-center mt-6 text-sm text-gray-600"><strong>Worst Case Payback:</strong> ~4 years. <strong>Allah T4 Non-Expanded NOP:</strong> 64.34M BDT (DSCR 9.1x, Payback 7.4 months).</p>
         </div>
     </section>
 
     <section class="section bg-white">
         <div class="container mx-auto max-w-6xl">
-            <h2>Heritage & Asset Foundation</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>Paternal Legacy: The 100-Year Consolidation</h3>
-                    <img src="founders-grandfather-fatima-mahal-builder-owner.jpg" alt="Fatima Mahal Founder" class="legacy-img">
-                    <p>The story begins with my paternal great-grandfather, “The Daroga,” who acquired the riverine land in Enayet Nagar and built Fatima Mahal in Sadiq Bazar. In 2009, my father, “The Founder,” built the 5-room bungalow on the land, marking a significant return. The Mahmud Tower (2016–2017, 116 Cr BDT) now serves as primary collateral.</p>
-                </div>
-                <div class="card">
-                    <h3>Maternal Roots & Professional Management</h3>
-                     <img src="sajid-hassan-founders-third-son-project-lead-author.jpg" alt="Sajid Hassan" class="legacy-img">
-                    <p>My maternal great-grandfather purchased Sarkar Bari land near Matlab, Chadpur in 1912, establishing a century of deep community trust. I began planning for Alo Chaya in 2023 and, as Operation Lead, engaged SGS Bangladesh (March–May 2025) for system verification. I am personally reinvesting 50% of my salary to guarantee operational stability.</p>
-                </div>
+            <h2>The Asset: A Glimpse of Alo Chaya</h2>
+            <div class="grid-3">
+                <div class="card"><img src="alo-chaya-private-lake.webp" alt="Private Lake" class="legacy-img"><h3>Private Lake & Surroundings</h3></div>
+                <div class="card"><img src="alo-chaya-gate.jpg" alt="Alo Chaya Gate" class="legacy-img"><h3>Main Gate & Entryway</h3></div>
+                <div class="card"><img src="alo-chaya-gazebo.webp" alt="Gazebo" class="legacy-img"><h3>Riverside Gazebo</h3></div>
+                <div class="card"><img src="bungalow.jpg" alt="Bungalow" class="legacy-img"><h3>The Original 5-Room Bungalow</h3></div>
+                <div class="card"><img src="resort-helipad.jpg" alt="Helipad" class="legacy-img"><h3>On-site Helipad</h3></div>
+                <div class="card"><img src="resort-architecture-map.jpg" alt="Architecture Map" class="legacy-img"><h3>Architectural Plan</h3></div>
             </div>
         </div>
     </section>
 
-     <section class="section">
+    <section class="section">
         <div class="container mx-auto max-w-6xl">
-            <h2>The Asset: Land & Collateral</h2>
-             <div class="grid-2">
+            <h2>Heritage & Foundation</h2>
+            <div class="grid-3">
                 <div class="card">
-                    <h3>Total Secured Land: 87.06 Bigha</h3>
-                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
-                        <li>Riverside Plot: <strong>5.356 Bigha</strong> (76,995 sq.ft)</li>
-                        <li>Private Lake & Surroundings: <strong>53.7 Bigha</strong> (771,235 sq.ft)</li>
-                        <li>Other Land: <strong>26.0 Bigha</strong> (260,071 sq.ft)</li>
-                        <li>Secondary Riverside: <strong>2.0 Bigha</strong> (~86,600 sq.ft)</li>
-                    </ul>
+                    <img src="founders-grandfather-fatima-mahal-builder-owner.jpg" alt="Fatima Mahal Founder" class="legacy-img">
+                    <h3>Paternal Legacy</h3>
+                    <p>Begins with my great-grandfather, “The Daroga,” who acquired the riverine land and built Fatima Mahal. My father, “The Founder,” built the 5-room bungalow in 2009, and the Mahmud Tower (116 Cr BDT collateral) in 2016.</p>
                 </div>
                 <div class="card">
-                    <h3>Total Secured Collateral: 213 Crore BDT</h3>
-                     <ul class="list-disc pl-5 space-y-2 text-gray-700">
-                        <li>City-center Mahmud Tower: <strong>116 Cr BDT</strong></li>
-                        <li>Alo Chaya Resort Building: <strong>60 Cr BDT</strong></li>
-                        <li><strong>Project Secured under Islamic Musharaka model.</strong></li>
-                     </ul>
+                    <img src="mahmud-tower-replaced-fatima-mahal.jpg" alt="Mahmud Tower" class="legacy-img">
+                    <h3>City-Center Asset</h3>
+                     <p>The Mahmud Tower, successor to the original Fatima Mahal, stands as the primary collateral, securing the project with a high-value, city-center asset.</p>
+                </div>
+                <div class="card">
+                    <img src="founders-father-in-law-sarkerbari-inheritor.jpg" alt="Sarker Bari Inheritor" class="legacy-img">
+                    <h3>Maternal Roots</h3>
+                    <p>My maternal great-grandfather purchased Sarkar Bari land in 1912, establishing a century of deep community trust and local presence, vital for smooth operations.</p>
                 </div>
             </div>
         </div>
@@ -116,24 +93,30 @@
     
     <section class="section bg-white">
         <div class="container mx-auto max-w-4xl text-center">
-            <h2>Marketing Positioning & Brand Moat</h2>
-            <p class="text-lg mb-4">A next-generation <strong>Wellness & Gastronomy Destination</strong> integrating the 8 Dimensions of Wellness, a high-trust service culture, and a non-replicable riverine luxury experience.</p>
-            <p>The fully constructed building eliminates development risk. Our unique IP and strategic branding potential, demonstrated by the Operation Lead's creative portfolio, create a visionary capability beyond simple real estate.</p>
-             <div class="flex flex-wrap gap-4 justify-center mt-6">
-                <a href="https://www.amazon.com/s?k=sajid+hassan&rh=n%3A133140011" target="_blank" class="button-link">View Lead's Creative Portfolio (Amazon)</a>
-                <a href="dashboard.html" class="button-link">View Full Financial Dashboard</a>
-            </div>
+            <h2>Project Lead & Visionary IP</h2>
+            <img src="sajid-hassan-founders-third-son-project-lead-author.jpg" alt="Sajid Hassan" class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-green-500">
+            <p class="text-lg mb-4">As Project Lead, I engaged SGS Bangladesh for system verification and am personally reinvesting 50% of my salary to guarantee operational stability. My creative portfolio demonstrates unique IP and strategic branding potential beyond real estate.</p>
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <img src="strangers-of-the-lighthouse-rulebook-and-cover.jpg" alt="Lighthouse Rulebook" class="legacy-img">
+                <img src="lighthouse-promo-v2-s2.jpg" alt="Lighthouse Promo" class="legacy-img">
+                <div class="flex items-center justify-center">
+                    <a href="https://www.facebook.com/watch/?v=3205338596428844" target="_blank" class="button-link">Watch Project Video</a>
+                </div>
+             </div>
         </div>
     </section>
     
     <section class="section contact-section">
         <div class="container mx-auto max-w-4xl text-center">
-            <h2>Contact & Enquiry</h2>
-            <p>For confidential enquiries and to discuss this partnership opportunity, please contact the Project Lead.</p>
+            <h2>Contact & Due Diligence</h2>
+            <p>For confidential enquiries and to review the full financial dashboard, please contact the Project Lead.</p>
             <div class="mt-6">
                 <p class="text-lg"><strong>Sajid Hassan</strong></p>
                 <p class="text-lg">Phone: <strong>01327-379392</strong> (Please send a WhatsApp message before calling)</p>
                 <p class="text-lg">Email: <strong>alochayariverine.info@gmail.com</strong></p>
+            </div>
+            <div class="mt-8">
+                 <a href="dashboard.html" class="button-link">View Full Financial Dashboard</a>
             </div>
         </div>
     </section>
