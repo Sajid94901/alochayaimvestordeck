@@ -3,116 +3,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alo Chaya — Investor Strategic & Financial Defense (3-Scenario FINAL)</title>
+<title>Alo Chaya - Confidential Investor Memorandum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-    /* Base Styles for Investment Deck */
-    body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#f1ffef; color:#0b1220; padding:18px; }
-    .card { background:white; border-radius:12px; padding:24px; box-shadow:0 10px 25px rgba(3,15,30,0.1); margin-bottom:24px; border-left: 6px solid #047857; }
-    h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: #0b61a4; text-align: center; }
-    h2 { font-size: 1.8rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem; color: #047857; }
-    h3 { font-size: 1.3rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; }
-    table { border-collapse: collapse; width: 100%; margin-top: 12px; font-size: 0.875rem; }
-    th, td { border: 1px solid #e5e7eb; padding: 10px 8px; text-align: left; }
-    th { background-color: #ecfdf5; font-weight: 700; color: #047857; text-align: center; }
-    .mono { font-family: 'Courier New', Courier, monospace; text-align: right; font-weight: 600; }
-    .highlight { background-color: #f0fdf4; font-weight: 700; }
-    .bg-yellow-100 { background-color: #fef9c3; }
-    .text-red-700 { color: #b91c1c; }
-    .text-blue-600 { color: #2563eb; }
-    
-    /* Utility for buttons/links */
-    .button-link { display: inline-block; padding: 8px 16px; background-color: #0b61a4; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: background-color 0.3s; }
-    .button-link:hover { background-color: #1e40af; }
+  :root { --primary-color: #064e3b; --secondary-color: #1e3a8a; }
+  body { font-family: 'Inter', system-ui, sans-serif; background-color: #f8fafc; color: #1e293b; }
+  .section { padding: 4rem 1.5rem; }
+  .hero { display: flex; align-items: center; justify-content: center; min-height: 90vh; background: linear-gradient(rgba(10, 20, 30, 0.75), rgba(10, 20, 30, 0.75)), url('alo-chaya-60000sqf-overview.jpg'); background-size: cover; background-position: center; color: white; text-align: center; }
+  .hero-content { max-width: 800px; }
+  .hero h1 { font-size: 2rem; line-height: 1.2; font-weight: 600; }
+  .hero .highlight { color: #6ee7b7; font-weight: 800; font-size: 3.5rem; display: block; margin-top: 0.5rem; }
+  .card { background:white; border-radius:8px; padding:24px; box-shadow:0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); margin-bottom:1.5rem; }
+  h2 { font-size: 2.25rem; font-weight: 700; margin-bottom: 2rem; color: var(--primary-color); text-align: center; }
+  h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: var(--secondary-color); border-bottom: 2px solid #e0e7ff; padding-bottom: 0.5rem; }
+  p { line-height: 1.7; margin-bottom: 1rem; color: #334155; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .stat-card { background-color: #f0fdf4; border-left: 4px solid var(--primary-color); padding: 1.5rem; border-radius: 4px; }
+  .stat-title { font-size: 0.9rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.05em; }
+  .stat-value { font-size: 2rem; font-weight: 700; color: var(--primary-color); }
+  .legacy-img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem; }
+  .button-link { display: inline-block; padding: 12px 24px; background-color: var(--secondary-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: background-color 0.3s; }
+  .button-link:hover { background-color: #1e318a; }
+  .contact-section { background-color: #111827; color: #d1d5db; }
+  .contact-section h2 { color: white; }
 </style>
 </head>
 <body>
 
-<div class="container mx-auto max-w-6xl">
+<header class="hero">
+    <div class="hero-content">
+        <h1>Activate a <span class="text-green-300">97 Cr BDT</span> Family Legacy Asset with a</h1>
+        <span class="highlight">2.44 Cr BDT Partnership</span>
+        <p class="mt-4 text-lg text-gray-200">(~2.5% of total asset value)</p>
+    </div>
+</header>
+
+<main>
+    <section class="section">
+        <div class="container mx-auto max-w-6xl">
+            <h2>Financial Performance Highlights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="stat-card">
+                    <p class="stat-title">Projected Annual NOP</p>
+                    <p class="stat-value">48.68M BDT</p>
+                    <p class="text-sm text-gray-600">(Low Ideal Scenario)</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-title">DSCR</p>
+                    <p class="stat-value">6.88x</p>
+                    <p class="text-sm text-gray-600">(vs 3.95 Cr Benchmark Loan)</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-title">Payback Period</p>
+                    <p class="stat-value">9.7 Months</p>
+                    <p class="text-sm text-gray-600">(Low Ideal Scenario)</p>
+                </div>
+                 <div class="stat-card">
+                    <p class="stat-title">IRR</p>
+                    <p class="stat-value">17%</p>
+                    <p class="text-sm text-gray-600">(True Mid Scenario)</p>
+                </div>
+            </div>
+            <p class="text-center mt-6 text-sm text-gray-600"><strong>Worst Case Payback:</strong> ~4 years. <strong>Allah T4 Non-Expanded NOP:</strong> 64.34M BDT (DSCR 9.1x, Payback 7.4 months).</p>
+        </div>
+    </section>
+
+    <section class="section bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <h2>Heritage & Asset Foundation</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Paternal Legacy: The 100-Year Consolidation</h3>
+                    <img src="founders-grandfather-fatima-mahal-builder-owner.jpg" alt="Fatima Mahal Founder" class="legacy-img">
+                    <p>The story begins with my paternal great-grandfather, “The Daroga,” who acquired the riverine land in Enayet Nagar and built Fatima Mahal in Sadiq Bazar. In 2009, my father, “The Founder,” built the 5-room bungalow on the land, marking a significant return. The Mahmud Tower (2016–2017, 116 Cr BDT) now serves as primary collateral.</p>
+                </div>
+                <div class="card">
+                    <h3>Maternal Roots & Professional Management</h3>
+                     <img src="sajid-hassan-founders-third-son-project-lead-author.jpg" alt="Sajid Hassan" class="legacy-img">
+                    <p>My maternal great-grandfather purchased Sarkar Bari land near Matlab, Chadpur in 1912, establishing a century of deep community trust. I began planning for Alo Chaya in 2023 and, as Operation Lead, engaged SGS Bangladesh (March–May 2025) for system verification. I am personally reinvesting 50% of my salary to guarantee operational stability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section class="section">
+        <div class="container mx-auto max-w-6xl">
+            <h2>The Asset: Land & Collateral</h2>
+             <div class="grid-2">
+                <div class="card">
+                    <h3>Total Secured Land: 87.06 Bigha</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>Riverside Plot: <strong>5.356 Bigha</strong> (76,995 sq.ft)</li>
+                        <li>Private Lake & Surroundings: <strong>53.7 Bigha</strong> (771,235 sq.ft)</li>
+                        <li>Other Land: <strong>26.0 Bigha</strong> (260,071 sq.ft)</li>
+                        <li>Secondary Riverside: <strong>2.0 Bigha</strong> (~86,600 sq.ft)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Total Secured Collateral: 213 Crore BDT</h3>
+                     <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>City-center Mahmud Tower: <strong>116 Cr BDT</strong></li>
+                        <li>Alo Chaya Resort Building: <strong>60 Cr BDT</strong></li>
+                        <li><strong>Project Secured under Islamic Musharaka model.</strong></li>
+                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <div class="card bg-green-50 text-center border-green-500">
-        <h1>Alo Chaya Investment Due Diligence</h1>
-        <p class="text-xl text-gray-700">Strategic & Financial Defense Summary</p>
-        <a href="index.html" class="button-link">← Back to Guest Site Marketing Deck</a>
-    </div>
-
-    <div class="card">
-        <h2>1) Capital Structure & Collateral Defense</h2>
-        <p>The project is secured by a powerful generational cycle and substantial city assets, guaranteeing structural integrity and financial defense against default.</p>
-        <table>
-            <thead>
-                <tr><th>Asset</th><th>Valuation (BDT)</th><th>Status</th></tr>
-            </thead>
-            <tbody>
-                <tr class="highlight"><td>**City Collateral: Mahmud Tower**</td><td class="mono">116,000,000</td><td>Primary Security</td></tr>
-                <tr class="highlight"><td>**Project Asset: Alo Chaya Building (60,000 sq ft)**</td><td class="mono">60,000,000</td><td>On-Site Security</td></tr>
-                <tr><td>Riverine Land Base (85 Bighas)</td><td class="mono">N/A</td><td>Wholly-Owned Family Asset</td></tr>
-                <tr><td>Total Combined Appraised Value</td><td class="mono">176,000,000+</td><td>Strong Defense Position</td></tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class="card">
-        <h2>2) Loan Analysis Scenarios (10-Year Term, 13% IJARA)</h2>
-        <p>Analysis of debt service coverage for three potential funding needs.</p>
-        <table>
-            <thead>
-                <tr><th>Scenario</th><th>Loan Amount</th><th>Monthly Debt Service (DS)</th><th>Annual DS</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>**Low CapEx**</td><td class="mono text-blue-600">3,950,000</td><td class="mono">58,700</td><td class="mono">704,400</td></tr>
-                <tr><td>**Mid-Range**</td><td class="mono text-blue-600">5,650,000</td><td class="mono">83,990</td><td class="mono">1,007,880</td></tr>
-                <tr><td>**High Expansion**</td><td class="mono text-red-700">18,000,000</td><td class="mono">267,660</td><td class="mono">3,211,920</td></tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class="card">
-        <h2>3) Projected Annual Revenue (23 Rooms)</h2>
-        <p class="text-sm text-gray-700">Revenue is modeled conservatively, assuming a low occupancy rate and a discounted ADR of $15,000$ BDT.</p>
-        <table>
-            <thead>
-                <tr><th>Metric</th><th>Scenario 1 (150 nights)</th><th>Scenario 2 (180 nights)</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>Annual Occupancy Rate</td><td class="mono">41.1%</td><td class="mono">49.3%</td></tr>
-                <tr><td>Annual Room Revenue @ 15,000 BDT ADR</td><td class="mono">51,750,000</td><td class="mono">62,100,000</td></tr>
-                <tr class="highlight"><td>**Total Gross Revenue (Incl. F&B)**</td><td class="mono">60,806,250</td><td class="mono">72,967,500</td></tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class="card">
-        <h2>4) Profit & Loss Summary (Low Ideal - 23 Rooms × 180 Nights)</h2>
-        <p class="text-sm text-gray-700">This scenario confirms the operational margin is sufficient to service even the larger **$5.65$ Cr** loan.</p>
-        <table>
-            <thead>
-                <tr><th>Line Item</th><th>Monthly (BDT)</th><th>Annual (BDT)</th><th>Notes</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>**Adjusted Room Revenue (15k ADR)**</td><td class="mono">5,175,000</td><td class="mono">62,100,000</td><td>Gross Rev after 5k discount</td></tr>
-                <tr><td>Total Gross Revenue (incl. F&B)</td><td class="mono">6,080,625</td><td class="mono">72,967,500</td><td>F&B Rev (25%) less COGS (30%)</td></tr>
-                <tr><td>Total Operating Expenses (Fixed + Variable)</td><td class="mono">(520,000)</td><td class="mono">(6,240,000)</td><td>Utilities, Maint., Marketing, etc.</td></tr>
-                <tr class="bg-yellow-100"><td>**Full Dignified Payroll (Kay's Architecture)**</td><td class="mono">(1,504,000)</td><td class="mono">(18,048,000)</td><td>**Key Cost for Service Competence**</td></tr>
-                <tr class="highlight"><td>**EBITDA / Operating Profit**</td><td class="mono">4,056,625</td><td class="mono">48,679,500</td><td>Before Interest, Tax, Depreciation</td></tr>
-                
-                <tr><td>Annual Debt Service (5.65 Cr Loan)</td><td class="mono">(83,990)</td><td class="mono">(1,007,880)</td><td>Interest-only IJARA DS</td></tr>
-                <tr class="highlight"><td>**Net Profit Before Tax**</td><td class="mono">3,972,635</td><td class="mono">47,671,620</td><td>**Strong Coverage Ratio**</td></tr>
-            </tbody>
-        </table>
-    </div>
+    <section class="section bg-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2>Marketing Positioning & Brand Moat</h2>
+            <p class="text-lg mb-4">A next-generation <strong>Wellness & Gastronomy Destination</strong> integrating the 8 Dimensions of Wellness, a high-trust service culture, and a non-replicable riverine luxury experience.</p>
+            <p>The fully constructed building eliminates development risk. Our unique IP and strategic branding potential, demonstrated by the Operation Lead's creative portfolio, create a visionary capability beyond simple real estate.</p>
+             <div class="flex flex-wrap gap-4 justify-center mt-6">
+                <a href="https://www.amazon.com/s?k=sajid+hassan&rh=n%3A133140011" target="_blank" class="button-link">View Lead's Creative Portfolio (Amazon)</a>
+                <a href="dashboard.html" class="button-link">View Full Financial Dashboard</a>
+            </div>
+        </div>
+    </section>
     
-    <footer class="text-center py-6 text-gray-600">
-        <p class="text-sm mt-2">Prepared by The Project Lead, Sajid Hassan. An undertaking of M/S Hassan & Brothers & Hassan & Brothers Ltd.</p>
-    </footer>
-</div>
-
-<script>
-    // Placeholder to prevent errors, actual calculation functions likely in external file.
-    function fmt(n) {
-        return new Intl.NumberFormat('en-BD', { style: 'currency', currency: 'BDT', minimumFractionDigits: 0 }).format(n);
-    }
-</script>
+    <section class="section contact-section">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2>Contact & Enquiry</h2>
+            <p>For confidential enquiries and to discuss this partnership opportunity, please contact the Project Lead.</p>
+            <div class="mt-6">
+                <p class="text-lg"><strong>Sajid Hassan</strong></p>
+                <p class="text-lg">Phone: <strong>01327-379392</strong> (Please send a WhatsApp message before calling)</p>
+                <p class="text-lg">Email: <strong>alochayariverine.info@gmail.com</strong></p>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
