@@ -22,6 +22,8 @@
   .stat-card { background-color: #f0fdf4; border-left: 4px solid var(--primary-color); padding: 1.5rem; border-radius: 4px; text-align: center;}
   .stat-title { font-size: 0.9rem; font-weight: 600; color: #374151; text-transform: uppercase; letter-spacing: 0.05em; }
   .stat-value { font-size: 2rem; font-weight: 700; color: var(--primary-color); }
+  .gallery-img { width: 100%; height: 280px; object-fit: cover; border-radius: 8px; }
+  .legacy-img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem; }
   .button-link { display: inline-block; padding: 12px 24px; background-color: var(--secondary-color); color: white; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 1rem; transition: background-color 0.3s; }
   .contact-section { background-color: #111827; color: #d1d5db; }
   .contact-section h2 { color: white; }
@@ -40,32 +42,43 @@
     <section class="section">
         <div class="container mx-auto max-w-7xl">
             <h2 class="section-title">Financial Performance Highlights</h2>
-            
-            <div class="card bg-amber-50 border-l-4 border-amber-500">
-                <h3 class="text-amber-800">Conservative Baseline: "Improbable Mid" Scenario</h3>
-                <p><strong>Note:</strong> This scenario (12 rooms x 90 nights) is intentionally conservative. We consider it **improbable** due to high local demand. Even so, the operational EBITDA is a manageable **-6.06M BDT**, proving the project's resilience.</p>
-            </div>
+            <div class="card bg-amber-50 border-l-4 border-amber-500"><h3 class="text-amber-800">Conservative Baseline: "Improbable Mid"</h3><p><strong>Note:</strong> This scenario (12 rooms x 90 nights) is intentionally conservative to prove resilience. We consider it **improbable** due to high demand. Even here, the operational EBITDA is a manageable **-6.06M BDT**.</p></div>
+            <div class="card bg-teal-50 border-l-4 border-teal-600 mt-12"><h3 class="text-teal-800">Realistic Projection: "True Mid"</h3><p>This scenario (12 rooms x 180 nights) is a realistic baseline, showing strong viability.</p><div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4"><div class="stat-card"><p class="stat-title">Net Profit</p><p class="stat-value text-teal-900">7.51M BDT</p></div><div class="stat-card"><p class="stat-title">DSCR</p><p class="stat-value text-teal-900">5.02x</p></div><div class="stat-card"><p class="stat-title">Payback</p><p class="stat-value text-teal-900">20.4 Mo</p></div><div class="stat-card"><p class="stat-title">ROI</p><p class="stat-value text-teal-900">58.9%</p></div></div></div>
+            <div class="card bg-green-50 border-l-4 border-green-600 mt-12"><h3 class="text-green-800">High-Potential: "Low Ideal"</h3><p>This scenario (18 rooms x 180 nights) is our operational target, showcasing rapid returns.</p><div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4"><div class="stat-card"><p class="stat-title">Net Profit</p><p class="stat-value">20.14M BDT</p></div><div class="stat-card"><p class="stat-title">DSCR</p><p class="stat-value">10.14x</p></div><div class="stat-card"><p class="stat-title">Payback</p><p class="stat-value">10.1 Mo</p></div><div class="stat-card"><p class="stat-title">ROI</p><p class="stat-value">119.0%</p></div></div></div>
+        </div>
+    </section>
 
-            <div class="card bg-teal-50 border-l-4 border-teal-600 mt-12">
-                <h3 class="text-teal-800">Realistic Projection: "True Mid" Scenario</h3>
-                <p>This scenario (12 rooms x 180 nights) is a more realistic, yet still conservative, baseline. It is the first profitable stage and shows the project's strong viability.</p>
-                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-                    <div class="stat-card"> <p class="stat-title">Annual Net Profit</p> <p class="stat-value text-teal-900">7.51M BDT</p></div>
-                    <div class="stat-card"> <p class="stat-title">DSCR</p> <p class="stat-value text-teal-900">5.02x</p></div>
-                    <div class="stat-card"> <p class="stat-title">Payback</p> <p class="stat-value text-teal-900">20.4 Mo</p></div>
-                    <div class="stat-card"> <p class="stat-title">Annual ROI</p> <p class="stat-value text-teal-900">58.9%</p></div>
-                </div>
-            </div>
+    <section class="section bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <h2>The Vision: An Expansive Riverine Retreat</h2>
+            <p class="text-center text-lg text-gray-600 max-w-4xl mx-auto">Alo Chaya Limited is an 87-bigha tropical resort on the banks of the Meghna River, blending natural serenity with high-end amenities. Our design emphasizes a seamless connection between indoor and outdoor spaces, using natural materials to create an eco-friendly and culturally authentic atmosphere just a 75km drive from the heart of Dhaka.</p>
+        </div>
+    </section>
 
-            <div class="card bg-green-50 border-l-4 border-green-600 mt-12">
-                <h3 class="text-green-800">High-Potential Baseline: "Low Ideal" Scenario</h3>
-                <p>This scenario (18 rooms x 180 nights) demonstrates the powerful profitability unlocked by engaging more of our existing room capacity, showcasing rapid returns.</p>
-                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-                    <div class="stat-card"> <p class="stat-title">Annual Net Profit</p> <p class="stat-value">20.14M BDT</p></div>
-                    <div class="stat-card"> <p class="stat-title">DSCR</p> <p class="stat-value">10.14x</p></div>
-                    <div class="stat-card"> <p class="stat-title">Payback</p> <p class="stat-value">10.1 Mo</p></div>
-                    <div class="stat-card"> <p class="stat-title">Annual ROI</p> <p class="stat-value">119.0%</p></div>
-                </div>
+    <section class="section">
+        <div class="container mx-auto max-w-7xl">
+            <h2>A Glimpse of Alo Chaya</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card p-4"><img src="alo-chaya-private-lake.webp" alt="Private Lake at Alo Chaya" class="gallery-img"><h3>The Private Lake</h3></div>
+                <div class="card p-4"><img src="side-view-of-the-dhonagoda-river.jpg" alt="View of the Dhonagoda River" class="gallery-img"><h3>Riverfront Serenity</h3></div>
+                <div class="card p-4"><img src="view-from-bridge-near-gazebo-at-dusk.jpg" alt="View from the bridge at dusk" class="gallery-img"><h3>Evening Ambiance</h3></div>
+                <div class="card p-4"><img src="alo-chaya-gate.jpg" alt="Main Gate of Alo Chaya" class="gallery-img"><h3>Grand Entrance</h3></div>
+                <div class="card p-4"><img src="bungalow.jpg" alt="The Original Bungalow" class="gallery-img"><h3>The Heritage Bungalow</h3></div>
+                <div class="card p-4"><img src="pathway.jpg" alt="Shaded pathway at the resort" class="gallery-img"><h3>Tranquil Walkways</h3></div>
+                <div class="card p-4"><img src="alo-chaya-gazebo.webp" alt="Riverside Gazebo" class="gallery-img"><h3>The Riverside Gazebo</h3></div>
+                <div class="card p-4"><img src="resort-helipad.jpg" alt="Resort Helipad" class="gallery-img"><h3>Direct Helipad Access</h3></div>
+                <div class="card p-4"><img src="resort-architecture-map.jpg" alt="Architectural Map" class="gallery-img"><h3>The Master Plan</h3></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <h2>Heritage, Foundation & Vision</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card"><img src="founders-grandfather-fatima-mahal-builder-owner.jpg" alt="Fatima Mahal Founder" class="legacy-img"><h3>Paternal Legacy</h3><p>Begins with my great-grandfather, who acquired the riverine land. My father built the 5-room bungalow in 2009 and the Mahmud Tower (116 Cr BDT collateral) in 2016.</p></div>
+                <div class="card"><img src="founders-father-in-law-sarkerbari-inheritor.jpg" alt="Sarker Bari Inheritor" class="legacy-img"><h3>Maternal Roots</h3><p>My maternal great-grandfather purchased Sarkar Bari land in 1912, establishing a century of deep community trust vital for smooth operations.</p></div>
+                <div class="card"><img src="sajid-hassan-founders-third-son-project-lead-author.jpg" alt="Sajid Hassan" class="legacy-img"><h3>Project Lead & IP</h3><p>As Project Lead, I engaged SGS for system verification and am personally reinvesting 50% of my salary to guarantee operational stability.</p></div>
             </div>
         </div>
     </section>
