@@ -16,10 +16,16 @@
   h1 { font-size: 2.5rem; font-weight: 800; text-align: center; color: var(--primary-color); margin-bottom: 2rem;}
   h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--secondary-color); border-bottom: 2px solid #e0e7ff; padding-bottom: 0.75rem;}
   h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: var(--primary-color);}
-  table { border-collapse:collapse; width:100%; font-size: 0.9rem; }
-  th, td { border:1px solid #e5e7eb; padding:8px 10px; text-align:left; }
-  th { background:#f0f9ff; color:#0c4a6e; font-weight: 600; }
   .nav { padding: 1rem 1.5rem; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+  /* New styles for the integrated model cards */
+  .model-card { background:white; border-radius:12px; margin-top: 2rem; margin-bottom: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden;}
+  .model-header { background-color: var(--secondary-color); color: white; padding: 1.5rem; }
+  .model-title { font-size: 1.75rem; font-weight: 800; color: white; border: none; }
+  .model-subtitle { font-size: 1rem; opacity: 0.9; }
+  .model-body { padding: 1.5rem; }
+  .model-body h3 { font-size: 1.25rem; font-weight: 700; color: var(--primary-color); margin-top: 1rem; margin-bottom: 0.5rem; }
+  .model-body ul { list-style-type: none; padding: 0; }
+  .model-body li { background-color: #f8fafc; border-left: 4px solid var(--primary-color); padding: 0.75rem 1rem; margin-bottom: 0.5rem; border-radius: 4px; }
 </style>
 </head>
 <body>
@@ -38,85 +44,60 @@
     <section class="section">
       <div class="container mx-auto max-w-5xl">
         <h1>The Brand-Driven Human Engine</h1>
-        <p class="text-center text-gray-600 -mt-6 mb-12">This doctrine synthesizes Alo Chaya’s brand architecture and human capital philosophy into a single, cohesive system. We ensure our workforce and guest experience mirror our brand personality and dynastic identity, creating an unbreachable competitive moat that justifies our premium 15,000 BDT Adjusted ADR.</p>
+        <p class="text-center text-gray-600 -mt-6 mb-12">This doctrine synthesizes our brand architecture and human capital philosophy into a single, cohesive system, proving how we justify our premium 15,000 BDT Adjusted ADR.</p>
 
-        <div class="card bg-gray-50">
-            <h2>Psychological Architecture: The Science of Motivation</h2>
-            <p>Our entire strategy is built upon a deep understanding of human needs. We use Maslow's expanded hierarchy to engineer our **employee experience** and Vance Packard's hidden needs to design our **guest experience**.</p>
-            
-            <h3 class="mt-6">The Guest Experience (Fulfilling Packard's 8 Hidden Needs)</h3>
-            <p>Our marketing is not about selling rooms; it's about satisfying the deep, subconscious needs of our guests:</p>
-            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-700">
-                <li><strong>Emotional Security & Sense of Roots:</strong> We provide a safe, high-trust environment anchored in a powerful dynastic and family heritage.</li>
-                <li><strong>Reassurance of Worth & Ego Gratification:</strong> Our premium service and sophisticated atmosphere make guests feel valued, respected, and successful.</li>
-                <li><strong>Creative Outlets & Love Objects:</strong> Our cultural and wellness activities provide enriching experiences and create opportunities for deep family bonding.</li>
-                <li><strong>Sense of Power & Immortality:</strong> We empower guests to take control of their well-being and create timeless memories that become part of their own family legacy.</li>
-            </ul>
-
-            <h3 class="mt-6">The Employee Experience (Fulfilling Maslow's 8-Stage Hierarchy)</h3>
-            <p>Our HR model is a ladder for human fulfillment, designed to attract and retain the most motivated individuals:</p>
-            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-700">
-                <li><strong>Physiological & Safety:</strong> Met through our dignified payroll, premium accommodation, and predictable, secure employment.</li>
-                <li><strong>Belongingness & Esteem:</strong> Fostered through our "local first" hiring policy, mentorship programs, and a culture of respect and recognition.</li>
-                <li><strong>Cognitive & Aesthetic:</strong> Addressed by our training academy that encourages learning, mastery, and an appreciation for the beauty of high-quality service.</li>
-                <li><strong>Self-Actualization & Transcendence:</strong> Achieved as employees master their roles, become mentors themselves, and contribute to a legacy project that has a purpose beyond profit.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Doctrine Bridge: Brand Personality → HR Culture</h2>
-            <p>We translate Jennifer Aaker’s 5 dimensions of brand personality directly into our hiring, training, and cultural standards: **Sincerity** (integrity-based hiring), **Excitement** (creative empowerment), **Competence** (skill hierarchy), **Sophistication** (service refinement), and **Ruggedness** (emotional resilience).</p>
-        </div>
-
-        <div class="card bg-gray-50">
-            <h2>Strategic 5P Synthesis</h2>
-            <p>Our operational strategy is a synthesis of three proven "5P" frameworks, ensuring our high-level plans are executed flawlessly in our daily practices.</p>
-            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-700">
-                <li><strong>Schuler's HR 5Ps (Philosophy, Policies, Programs, Practices, Processes):</strong> Forms the foundation of our HR system, from our "Dignified Payroll" philosophy to our daily recruitment practices.</li>
-                <li><strong>Mintzberg's 5Ps (Plan, Ploy, Pattern, Position, Perspective):</strong> Guides our competitive strategy, from our long-term plan for market leadership to the daily patterns of excellence that define our brand position.</li>
-                <li><strong>Pryor's 5Ps (Purpose, Principles, Processes, People, Performance):</strong> Governs our implementation, ensuring that our dynastic purpose and ethical principles are embedded in the processes our people use to drive performance.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Granular Staffing & Dignified Payroll Model</h2>
-            <p>This table outlines the precise staffing levels and monthly payroll for each operational scenario, forming the foundation of our "Dignified Payroll" promise.</p>
-            <div class="overflow-x-auto mt-4">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Role Category</th>
-                            <th>Worst / Improbable Mid</th>
-                            <th>True Mid</th>
-                            <th>Low Ideal</th>
-                            <th>High Ideal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-blue-50"><td colspan="5" class="font-bold">Executive</td></tr>
-                        <tr><td>- CEO / Founder's Salary</td><td>1 @ 250k (Drawing <strong>125k</strong>)</td><td>1 @ 250k = <strong>250,000</strong></td><td>1 @ 250k = <strong>250,000</strong></td><td>1 @ 250k = <strong>250,000</strong></td></tr>
-                        <tr class="bg-blue-50"><td colspan="5" class="font-bold">Kitchen Team (Gastronauts)</td></tr>
-                        <tr><td>- Sous Chef Trainer / Head Chef</td><td>1 @ 60k = 60,000</td><td>1 @ 60k = 60,000</td><td>1 @ 60k = 60,000</td><td>1 @ 75k (Exec. Chef) = 75,000</td></tr>
-                        <tr><td>- Gastronomy Technicians</td><td>3 @ 36k = 108,000</td><td>3 @ 36k = 108,000</td><td>4 @ 36k = 144,000</td><td>5 @ 36k = 180,000</td></tr>
-                        <tr class="bg-blue-50"><td colspan="5" class="font-bold">Office & Management Team</td></tr>
-                        <tr><td>- Office Versatilist (GM)</td><td>-</td><td>1 @ 88k = 88,000</td><td>1 @ 88k = 88,000</td><td>1 @ 88k = 88,000</td></tr>
-                    </tbody>
-                </table>
+        <div class="model-card">
+            <div class="model-header">
+                <h2 class="model-title">Psychological Architecture</h2>
+                <p class="model-subtitle">The Science of Fulfilling Human Needs</p>
             </div>
-            <div class="p-4 bg-gray-50 rounded-md mt-6">
-                <p><strong>Operational Logic Note:</strong> The staffing ratio maintains a sacred efficiency logic: Office staff = ¼ of kitchen staff. The kitchen team is prioritized, followed by housekeeping, then service. This ensures overhead control & service scalability without compromising welfare.</p>
-                <p class="mt-2"><strong>Accountability Note:</strong> Project Lead contributes 50% of salary in worst/improbable scenarios to demonstrate dynastic accountability and equity with staff.</p>
+            <div class="model-body">
+                <h3>Guest Experience (Packard's 8 Hidden Needs)</h3>
+                <ul>
+                    <li><strong>Emotional Security & Roots:</strong> A safe, dynastic heritage.</li>
+                    <li><strong>Reassurance of Worth & Ego Gratification:</strong> Premium service that makes guests feel valued.</li>
+                    <li><strong>Creative Outlets & Love Objects:</strong> Enriching activities for family bonding.</li>
+                    <li><strong>Sense of Power & Immortality:</strong> Empowering wellness and timeless memories.</li>
+                </ul>
+                <h3>Employee Experience (Maslow's 8-Stage Hierarchy)</h3>
+                <ul>
+                    <li><strong>Physiological & Safety:</strong> Dignified pay and secure employment.</li>
+                    <li><strong>Belongingness & Esteem:</strong> A culture of respect and recognition.</li>
+                    <li><strong>Cognitive & Aesthetic:</strong> Mastery through training and appreciation for quality.</li>
+                    <li><strong>Self-Actualization & Transcendence:</strong> Becoming mentors and contributing to a legacy.</li>
+                </ul>
             </div>
         </div>
 
-        <div class="card">
-            <h2>Integrated Leadership–Followership Framework</h2>
-            <p>Our leadership doctrine synthesizes world-class models (Collins, Maxwell, Kelley, Hersey-Blanchard) to ensure we identify, nurture, and empower leaders at every level, creating a clear, merit-based path for promotion tied to objective MBO KPIs.</p>
+        <div class="model-card">
+            <div class="model-header">
+                <h2 class="model-title">Strategic 5P Synthesis</h2>
+                <p class="model-subtitle">Connecting High-Level Plans to Daily Execution</p>
+            </div>
+            <div class="model-body">
+                <h3>The Three Pillars of Our Strategy</h3>
+                <ul>
+                    <li><strong>Schuler's HR 5Ps:</strong> Our **Philosophy**, **Policies**, **Programs**, **Practices**, & **Processes** for managing people.</li>
+                    <li><strong>Mintzberg's 5Ps:</strong> Our competitive **Plan**, **Ploy**, **Pattern**, **Position**, & **Perspective**.</li>
+                    <li><strong>Pryor's 5Ps:</strong> Our implementation framework of **Purpose**, **Principles**, **Processes**, **People**, & **Performance**.</li>
+                </ul>
+            </div>
         </div>
         
-        <div class="card bg-green-50 border-l-4 border-green-600">
-            <h3 class="text-green-800">Doctrine Integration Loop</h3>
-            <p class="font-semibold text-green-900">Our doctrine operationalizes from People to Purpose to Profit. Branding defines behavioral standards, HRM institutionalizes them, and Finance validates them. This triple-loop makes Alo Chaya’s cultural capital measurable and scalable.</p>
+        <div class="model-card">
+            <div class="model-header">
+                <h2 class="model-title">Integrated Leadership Framework</h2>
+                <p class="model-subtitle">How We Build and Promote Leaders</p>
+            </div>
+            <div class="model-body">
+                <h3>Our Leadership Formula</h3>
+                <ul>
+                    <li><strong>Jim Collins (Level 5):</strong> We cultivate leaders with deep humility and intense professional will.</li>
+                    <li><strong>John Maxwell (5 Levels):</strong> Leaders earn influence through competence, not just title.</li>
+                    <li><strong>Robert Kelley (Followership):</strong> We recruit engaged, critical thinkers as partners in our mission.</li>
+                    <li><strong>Hersey-Blanchard (Situational Leadership):</strong> Managers adapt their style to empower each team member.</li>
+                </ul>
+            </div>
         </div>
       </div>
     </section>
