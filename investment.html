@@ -87,6 +87,22 @@
         </table>
     </div>
 </div>
+<div class="Box Box--responsive mt-3">
+    <div class="Box-header">
+        <h2 class="Box-title">
+            5) IAS 7 Forecasted Cash Flow (10 Cr. Phased Loan)
+        </h2>
+    </div>
+    <div class="Box-body">
+        <p>
+            This forecast models the full <strong>10 Crore BDT (100M)</strong> phased facility,
+            demonstrating superior liquidity and compliance.
+        </p>
+        <div id="cash-flow-forecast-container" class="markdown-body">
+        </div>
+    </div>
+</div>
+    
 <div class="card" id="ifrs-annual-recalculated">
     <div class="card-header">
         <h2 class="card-title">Table 2: IFRS/IAS Detailed Annual Forecast (Recalculated)</h2>
@@ -446,5 +462,151 @@
         </table>
     </div>
   </div>
+    <script>
+    // --- HELPER FUNCTIONS (Because your file doesn't have them) ---
+
+    /**
+     * Formats a number as BDT currency.
+     */
+    function formatCurrency(amount) {
+        return new Intl.NumberFormat('en-IN', {
+            style: 'currency',
+            currency: 'BDT',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+        }).format(amount).replace("BDT", "BDT ");
+    }
+    
+    /**
+     * Legacy formatter, keeping it for compatibility.
+     */
+    function formatBdt(amount) {
+         return new Intl.NumberFormat('en-IN', {
+            style: 'currency',
+            currency: 'BDT',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+        }).format(amount).replace("BDT", "BDT ");
+    }
+
+    /**
+     * Calculates the annual payment for a loan.
+     */
+    function calculateLoan(principal, annualRate, years) {
+        let monthlyRate = annualRate / 12;
+        let numPayments = years * 12;
+        let monthlyPayment = principal * (monthlyRate * Math.pow(1 + monthlyRate, numPayments)) / (Math.pow(1 + monthlyRate, numPayments) - 1);
+        return monthlyPayment * 12; // Return annual service
+    }
+
+    // --- The Cash Flow Function ---
+    function generateCashFlowForecast() {
+        const annualNOP = 48679500; // Hard-coded from our P&L
+        const totalLoanAmount = 100000000; 
+        const interestRate = 0.09; 
+        const loanTerm = 5; 
+
+        const annualDebtService_10Cr = calculateLoan(totalLoanAmount, interestRate, loanTerm);
+        
+        const capexSchedule = [-24400000, -756000Example: -7.56 Cr (Legacy Expansion)
+        0,
+        0,
+        0
+    ];
+        const loanDrawdownSchedule = [100000000, 0, 0, 0, 0];
+
+        let html = `<table class="data-table">
+            <thead>
+                <tr>
+                    <th>Line Item (5-Year Forecast)</th>
+                    <th>Year 1 (BDT)</th>
+                    <th>Year 2 (BDT)</th>
+                    <th>Year 3 (BDT)</th>
+                    <th>Year 4 (BDT)</th>
+                    <th>Year 5 (BDT)</th>
+                </tr>
+            </thead>
+            <tbody>`;
+
+        let y1_cfo = annualNOP;
+        let y1_cfi = capexSchedule[0];
+        let y1_cff_in = loanDrawdownSchedule[0];
+        let y1_cff_out = -annualDebtService_10Cr;
+        let y1_net_cash = y1_cfo + y1_cfi + y1_cff_in + y1_cff_out;
+        let y1_end_cash = y1_net_cash;
+
+        let y2_cfo = annualNOP;
+        let y2_cfi = capexSchedule[1];
+        let y2_cff_in = loanDrawdownSchedule[1];
+        let y2_cff_out = -annualDebtService_10Cr;
+        let y2_net_cash = y2_cfo + y2_cfi + y2_cff_in + y2_cff_out;
+        let y2_end_cash = y1_end_cash + y2_net_cash;
+
+        let y3_cfo = annualNOP;
+        let y3_cfi = capexSchedule[2];
+        let y3_cff_in = loanDrawdownSchedule[2];
+        let y3_cff_out = -annualDebtService_10Cr;
+        let y3_net_cash = y3_cfo + y3_cfi + y3_cff_in + y3_cff_out;
+        let y3_end_cash = y2_end_cash + y3_net_cash;
+
+        let y4_cfo = annualNOP;
+        let y4_cfi = capexSchedule[3];
+        let y4_cff_in = loanDrawdownSchedule[3];
+        let y4_cff_out = -annualDebtService_10Cr;
+        let y4_net_cash = y4_cfo + y4_cfi + y4_cff_in + y4_cff_out;
+        let y4_end_cash = y3_end_cash + y4_net_cash;
+        
+        let y5_cfo = annualNOP;
+        let y5_cfi = capexSchedule[4];
+        let y5_cff_in = loanDrawdownSchedule[4];
+        let y5_cff_out = -annualDebtService_10Cr;
+        let y5_net_cash = y5_cfo + y5_cfi + y5_cff_in + y5_cff_out;
+        let y5_end_cash = y4_end_cash + y5_net_cash;
+
+        html += `<tr><td colspan="6" class="section-header"><strong>A) Cash Flow from Operations (CFO)</strong></td></tr>`;
+        html += `<tr><td>Net Operating Profit (NOP)</td>
+                 <td>${formatCurrency(y1_cfo)}</td><td>${formatCurrency(y2_cfo)}</td>
+                 <td>${formatCurrency(y3_cfo)}</td><td>${formatCurrency(y4_cfo)}</td>
+                 <td>${formatCurrency(y5_cfo)}</td></tr>`;
+        
+        html += `<tr><td colspan="6" class="section-header"><strong>B) Cash Flow from Investing (CFI)</strong></td></tr>`;
+        html += `<tr><td>Capital Expenditure (CapEx)</td>
+                 <td>${formatCurrency(y1_cfi)}</td><td>${formatCurrency(y2_cfi)}</td>
+                 <td>${formatCurrency(y3_cfi)}</td><td>${formatCurrency(y4_cfi)}</td>
+                 <td>${formatCurrency(y5_cfi)}</td></tr>`;
+
+        html += `<tr><td colspan="6" class="section-header"><strong>C) Cash Flow from Financing (CFF)</strong></td></tr>`;
+        html += `<tr><td>Loan Drawdown (Inflow)</td>
+                 <td>${formatCurrency(y1_cff_in)}</td><td>${formatCurrency(y2_cff_in)}</td>
+                 <td>${formatCurrency(y3_cff_in)}</td><td>${formatCurrency(y4_cff_in)}</td>
+                 <td>${formatCurrency(y5_cff_in)}</td></tr>`;
+        html += `<tr><td>Debt Service (Outflow)</td>
+                 <td>${formatCurrency(y1_cff_out)}</td><td>${formatCurrency(y2_cff_out)}</td>
+                 <td>${formatCurrency(y3_cff_out)}</td><td>${formatCurrency(y4_cff_out)}</td>
+                 <td>${formatCurrency(y5_cff_out)}</td></tr>`;
+                 
+        html += `<tr><td colspan="6" class="section-header"><strong>Summary</strong></td></tr>`;
+        html += `<tr><td><strong>Net Change in Cash</strong></td>
+                 <td><strong>${formatCurrency(y1_net_cash)}</strong></td><td><strong>${formatCurrency(y2_net_cash)}</strong></td>
+                 <td><strong>${formatCurrency(y3_net_cash)}</strong></td><td><strong>${formatCurrency(y4_net_cash)}</strong></td>
+                 <td><strong>${formatCurrency(y5_net_cash)}</strong></td></tr>`;
+        
+        html += `<tr class="total-row"><td><strong>Ending Cash Position</strong></td>
+                 <td><strong>${formatCurrency(y1_end_cash)}</strong></td><td><strong>${formatBdt(y2_end_cash)}</strong></td>
+                 <td><strong>${formatBdt(y3_end_cash)}</strong></td><td><strong>${formatBdt(y4_end_cash)}</strong></td>
+                 <td><strong>${formatBdt(y5_end_cash)}</strong></td></tr>`;
+
+        html += `</tbody></table>`;
+        
+        document.getElementById('cash-flow-forecast-container').innerHTML = html;
+    }
+
+    // --- The Runner ---
+    window.onload = function() {
+        // We only call the function we just added
+        generateCashFlowForecast(); 
+    };
+        </script>
     </body>
 </html>
+
