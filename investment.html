@@ -289,6 +289,88 @@
             </tbody>
         </table>
     </div>
+    <script>
+/* Example: wire numbers by scenario into this object.
+   Replace these with DOM reads from your actual table cells or data-* attributes */
+const scenarios = ['worst','improbable','truemid','low','mid','high'];
+const data = {
+  worst:  { revenue: 11812500 - 2700000 /* = 9,112,500 in table */, ebitda: -15175500, net: -15175500 },
+  improbable: { revenue: 18622500 /*...*/, ebitda: -6063000, net: -6063000 },
+  truemid: { revenue: 34650000, ebitda: 10362000, net: 7512450 },
+  low: { revenue: 52068750, ebitda: 27780750, net: 20141044 },
+  mid: { revenue: 57825000, ebitda: 33537000, net: 24314325 },
+  high: { revenue: 63375000, ebitda: 39087000, net: 28338075 }
+};
+
+/* financial constants */
+const capex = 24400000;            // BDT
+const annualDebtService = 24912438; // BDT (from IAS7)
+const debtOutstanding = 3950000;   // if used for DSCR denom (example) - update if different
+
+function pct(x){ return (isFinite(x) ? (x*100).toFixed(2)+'%' : 'N/A'); }
+function money(x){ return isFinite(x) ? 'BDT '+Number(x).toLocaleString() : 'N/A'; }
+
+function computeRatios(s){
+  const rev = s.revenue;
+  const ebitda = s.ebitda;
+  const net = s.net;
+
+  // Net profit margin
+  const netMargin = rev ? (net / rev) : NaN;
+
+  // EBITDA margin
+  const ebitdaMargin = rev ? (ebitda / rev) : NaN;
+
+  // ROI (NetProfit / CapEx)
+  const roi = capex ? (net / capex) : NaN;
+
+  // Payback months (using EBITDA as proxy for annual cash): months = CapEx / (EBITDA/12)
+  const paybackMonths = ebitda > 0 ? (capex / (ebitda/12)) : NaN;
+
+  // DSCR as (EBITDA / Annual Debt Service)
+  const dscr = (annualDebtService>0) ? (ebitda / annualDebtService) : NaN;
+
+  // Debt/EBITDA (leverage)
+  const debtToEbitda = ebitda>0 ? (debtOutstanding / ebitda) : NaN;
+
+  return {
+    netMargin, ebitdaMargin, roi, paybackMonths, dscr, debtToEbitda
+  };
+}
+
+function buildTable() {
+  const tbody = document.querySelector('#ratios-table tbody');
+  tbody.innerHTML = '';
+
+  // prepare rows
+  const rows = [
+    { label: 'Net Profit Margin', def: 'NetProfit / Revenue' , key: 'netMargin', fmt: pct },
+    { label: 'EBITDA Margin', def: 'EBITDA / Revenue' , key: 'ebitdaMargin', fmt: pct },
+    { label: 'ROI (Annual)', def: 'NetProfit / CapEx', key: 'roi', fmt: pct },
+    { label: 'Payback (months, EBITDA)', def: 'CapEx / (EBITDA/12)', key: 'paybackMonths', fmt: v => (isFinite(v) ? v.toFixed(1)+' months' : 'N/A') },
+    { label: 'DSCR (EBITDA / Debt service)', def: 'EBITDA / AnnualDebtService', key: 'dscr', fmt: v => (isFinite(v) ? v.toFixed(2)+'x' : 'N/A') },
+    { label: 'Debt / EBITDA', def: 'Debt Outstanding / EBITDA', key:'debtToEbitda', fmt: v => (isFinite(v)? v.toFixed(2)+'x' : 'N/A') }
+  ];
+
+  for(const r of rows){
+    const tr = document.createElement('tr');
+    const th = document.createElement('td'); th.textContent = r.label; th.className = 'font-semibold p-2 sticky left-0 bg-white z-10';
+    const tdDef = document.createElement('td'); tdDef.textContent = r.def; tdDef.className = 'p-2';
+    tr.appendChild(th); tr.appendChild(tdDef);
+
+    for(const sKey of Object.keys(data)){
+      const metrics = computeRatios(data[sKey]);
+      const result = metrics[r.key];
+      const td = document.createElement('td');
+      td.className = 'p-2 mono';
+      td.textContent = r.fmt(result);
+      tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+  }
+}
+buildTable();
+    </script>
 </div>
   <div class="card" id="ifrs-monthly-recalculated">
     <div class="card-header">
@@ -530,6 +612,7 @@
   </div>
     </body>
 </html>
+
 
 
 
